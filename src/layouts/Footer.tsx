@@ -76,9 +76,9 @@ const Footer = () => {
                         <div>
                             <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
                             <div className="space-y-3 text-blue-200">
-                                <p>📞 +1 (555) 123-4567</p>
-                                <Link to="mailto:hello@codmonks.com">✉️ hello@codmonks.com</Link>
-                                <p>📍 123 Tech Street, Digital City, DC 12345</p>
+                                <p>📞 +91 9718964932</p>
+                                <Link to="mailto:sales@codmonks.com">✉️ sales@codmonks.com</Link>
+                                <p>📍 769, Sec - 64, Ballabhgarh, Faridabad, Haryana - 121004</p>
                             </div>
                         </div>
                     </div>

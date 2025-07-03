@@ -1,12 +1,3 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: [],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
-
 export default {
   content: [
     "./src/**/*.{html,js,ts,jsx,tsx}", // for React/Vite/Next
@@ -16,7 +7,7 @@ export default {
     extend: {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(90deg, #2563EB 0%, #A855F7 100%)',
-        'hero-gredient': "url('assets/images/texture.png'), linear-gradient(78.68deg, #CFEAF8 -55.27%, #FFFFFF 38.65%, #DBEAFE 138.95%)"
+        'hero-gredient': "url('images/texture.png'), linear-gradient(78.68deg, #CFEAF8 -55.27%, #FFFFFF 38.65%, #DBEAFE 138.95%)"
       },
       colors: {
         primary: '#6366f1',

@@ -52,22 +52,18 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
                         <div className="stats-card">
-                            <div className="text-4xl font-bold mb-2">782</div>
+                            <div className="text-3xl font-bold mb-2">250+</div>
                             <div className="text-blue-200">Projects Completed</div>
                         </div>
                         <div className="stats-card">
-                            <div className="text-4xl font-bold mb-2">12K</div>
+                            <div className="text-3xl font-bold mb-2">250+</div>
                             <div className="text-blue-200">Happy Clients</div>
                         </div>
                         <div className="stats-card">
-                            <div className="text-4xl font-bold mb-2">5,896</div>
+                            <div className="text-3xl font-bold mb-2">5,896</div>
                             <div className="text-blue-200">Hours of Work</div>
-                        </div>
-                        <div className="stats-card">
-                            <div className="text-4xl font-bold mb-2">$850K</div>
-                            <div className="text-blue-200">Revenue Generated</div>
                         </div>
                     </div>
                 </div>

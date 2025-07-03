@@ -37,11 +37,11 @@ const AboutUs = () => {
 
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                                    <div className="text-3xl font-bold text-blue-600 mb-2">2018</div>
+                                    <div className="text-3xl font-bold text-blue-600 mb-2">2019</div>
                                     <div className="text-gray-600">Founded</div>
                                 </div>
                                 <div className="text-center p-4 bg-purple-50 rounded-lg">
-                                    <div className="text-3xl font-bold text-purple-600 mb-2">700+</div>
+                                    <div className="text-3xl font-bold text-purple-600 mb-2">250+</div>
                                     <div className="text-gray-600">Projects Delivered</div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ const AboutUs = () => {
                             <img src="assets/images/about-us.jpg" alt="Our Story" className="rounded-lg shadow-lg" />
                             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600 rounded-lg flex items-center justify-center">
                                 <div className="text-center text-white">
-                                    <div className="text-2xl font-bold">25+</div>
+                                    <div className="text-2xl font-bold">5+</div>
                                     <div className="text-sm">Years Experience</div>
                                 </div>
                             </div>
@@ -328,22 +328,18 @@ const AboutUs = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                         <div className="text-center stats-card">
-                            <div className="text-5xl font-bold mb-4">782</div>
+                            <div className="text-5xl font-bold mb-4">250+</div>
                             <div className="text-blue-200 text-lg">Projects Completed</div>
                         </div>
                         <div className="text-center stats-card">
-                            <div className="text-5xl font-bold mb-4">12K</div>
+                            <div className="text-5xl font-bold mb-4">250+</div>
                             <div className="text-blue-200 text-lg">Happy Clients</div>
                         </div>
                         <div className="text-center stats-card">
                             <div className="text-5xl font-bold mb-4">5,896</div>
                             <div className="text-blue-200 text-lg">Hours of Work</div>
-                        </div>
-                        <div className="text-center stats-card">
-                            <div className="text-5xl font-bold mb-4">$850K</div>
-                            <div className="text-blue-200 text-lg">Revenue Generated</div>
                         </div>
                     </div>
                 </div>

@@ -90,7 +90,7 @@ const Technologies = () => {
 
     const stats = [
         { number: "50+", label: "Technologies Mastered" },
-        { number: "500+", label: "Projects Delivered" },
+        { number: "200+", label: "Projects Delivered" },
         { number: "5+", label: "Years Experience" },
         { number: "24/7", label: "Support Available" }
     ];
