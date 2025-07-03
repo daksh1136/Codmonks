@@ -14,7 +14,7 @@ export default function ContactForm() {
     };
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbzmUxI-rIrGiRPzI7xQ6ZqlQpLeK2uGhbjdqyE7bis0rWazDAQQ763p90_OJUARgUHj/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbxgDQW8pTAk3R_jqh6xJCsDob2bsuDg0uQy7dDG2_F6vm8__inXFgwQi9xEI-__NS8/exec", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
