@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 type FormData = {
     name: string;
@@ -137,6 +138,7 @@ const Contact: React.FC = () => {
                     </div>
                 </div>
             </section>
+            <ContactForm />
         </>
     );
 };
