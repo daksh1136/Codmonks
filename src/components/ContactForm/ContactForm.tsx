@@ -7,16 +7,21 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("Sending...");
 
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-    };
+    // const formData = {
+    //   name: e.target.name.value,
+    //   email: e.target.email.value,
+    //   message: e.target.message.value,
+    // };
 
     try {
       const response = await fetch("https://script.google.com/macros/s/AKfycbxgDQW8pTAk3R_jqh6xJCsDob2bsuDg0uQy7dDG2_F6vm8__inXFgwQi9xEI-__NS8/exec", {
         method: "POST",
-        body: JSON.stringify(formData),
+        mode: "cors",
+        body: JSON.stringify({
+            name: "Test User",
+            email: "test@example.com",
+            message: "Hello from Vite React!",
+          }),
         headers: {
           "Content-Type": "application/json",
         },
