@@ -14,7 +14,7 @@ export default function ContactForm() {
 
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbxgDQW8pTAk3R_jqh6xJCsDob2bsuDg0uQy7dDG2_F6vm8__inXFgwQi9xEI-__NS8/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbz679UWmOAWOHSYXPop0abBblpBY7Fn4_mZ5aXgvOzKk7tWskw81uWa-AuDenP12I22/exec", {
         method: "POST",
         body: formData,
       });
