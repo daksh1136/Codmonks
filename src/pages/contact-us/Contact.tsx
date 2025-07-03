@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import ContactForm from "../../Components/ContactForm/ContactForm";
 
 type FormData = {
     name: string;
