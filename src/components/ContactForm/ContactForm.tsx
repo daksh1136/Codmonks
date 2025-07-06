@@ -33,13 +33,62 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
-        <textarea name="message" placeholder="Your Message" required />
-        <button type="submit">Send</button>
-        <p>{status}</p>
-    </form>
+    <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-white shadow-lg rounded-2xl p-8">
+                <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
+                    <div className="col-span-2">
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            className="w-full border border-gray-300 p-3 rounded-xl focus:ring-indigo-500 focus:border-indigo-500"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input
+                            type="email"
+                            name="email"
+                            required
+                            placeholder="you@example.com"
+                            className="w-full border border-gray-300 p-3 rounded-xl focus:ring-indigo-500 focus:border-indigo-500"
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder=""
+                            maxLength={10}
+                            className="w-full border border-gray-300 p-3 rounded-xl focus:ring-indigo-500 focus:border-indigo-500"
+                            required
+                        />
+                    </div>
+                    <div className="col-span-2">
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea
+                            name="message"
+
+                            placeholder="Tell us about your project..."
+                            className="w-full border border-gray-300 p-3 rounded-xl focus:ring-indigo-500 focus:border-indigo-500"
+                        ></textarea>
+                    </div>
+                    <div className="col-span-2 text-right">
+                        <button
+                            type="submit"
+                            className="bg-gradient-to-r from-indigo-600 to-purple-500 text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition"
+                        >
+                            Send Message
+                        </button>
+                    </div>
+                    <p>{status}</p>
+                </form>
+            </div>
+        </div>
+    </section>
   );
 }
