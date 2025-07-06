@@ -1,11 +1,14 @@
 import { useState } from "react";
+import PageLoader from "../PageLoader/PageLoader";
 
 export default function ContactForm() {
   const [status, setStatus] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setStatus("Sending...");
+    setIsLoading(true);
     const formData = new FormData();
     formData.append("name", e.target.name.value);
     formData.append("email", e.target.email.value);
@@ -22,21 +25,26 @@ export default function ContactForm() {
       const result = await response.json();
       if (result.result === "success") {
         setStatus("Message Sent!");
+        setIsLoading(false);
         e.target.reset();
       } else {
         setStatus("Something went wrong.");
+        setIsLoading(false);
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setStatus("Error sending message.");
+      setIsLoading(false);
     }
   };
 
   return (
     <section className="py-16 bg-white">
+        { isLoading && <PageLoader /> }
         <div className="max-w-4xl mx-auto px-4">
             <div className="bg-white shadow-lg rounded-2xl p-8">
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
+                    <h3 className="text-success">{status}</h3>
                     <div className="col-span-2">
                         <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                         <input
@@ -85,7 +93,6 @@ export default function ContactForm() {
                             Send Message
                         </button>
                     </div>
-                    <p>{status}</p>
                 </form>
             </div>
         </div>
