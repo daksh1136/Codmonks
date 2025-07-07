@@ -43,7 +43,7 @@ export default function ContactForm() {
         { isLoading && <PageLoader /> }
         <div className="max-w-4xl mx-auto px-4">
             <div className="bg-white shadow-lg rounded-2xl p-8">
-                <h3 className="text-success">{status}</h3>
+                { (status) ? <h3 className="bg-green-100 border border-green-300 text-green-800 px-4 py-3 rounded-md text-center mb-3">{status}</h3> : '' }
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
                     <div className="col-span-2">
                         <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>

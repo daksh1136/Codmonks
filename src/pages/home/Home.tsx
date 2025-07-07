@@ -1,236 +1,226 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck, faCircleCheck, faCode, faImage, faPeopleArrows, faPhone, faRankingStar, faScrewdriverWrench, faThumbsUp, faTruck } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
-    return (
-        <>
-            {/* <!-- Hero Section --> */}
-            <section className="bg-hero-gredient from-blue-50 to-purple-50 py-20">
-                <div className="container mx-auto px-4">
-                    <div className="text-center max-w-4xl mx-auto">
-                        <p className="text-blue-600 font-medium mb-4">Transforming your Vision into digital excellence</p>
-                        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                            Craft your <span className="text-blue-600">Digital Dreams.</span><br />
-                            Without the complexity.
-                        </h1>
-                        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                            We turn your ideas into outstanding digital experiences through innovative software development and premium UI/UX design.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                                Start Project
-                            </Link>
-                            {/* <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
+  return (
+    <>
+      {/* <!-- Hero Section --> */}
+      <section className="bg-hero-gredient from-blue-50 to-purple-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <p className="text-blue-600 font-medium mb-4">Transforming your Vision into digital excellence</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              Craft your <span className="text-blue-600">Digital Dreams.</span><br />
+              Without the complexity.
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              We turn your ideas into outstanding digital experiences through innovative software development and premium UI/UX design.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                Start Project
+              </Link>
+              {/* <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
                                 Learn More
                             </button> */}
-                        </div>
-                    </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- Client Logos --> */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          {/* <p className="text-center text-gray-500 mb-8">Our Platform Partners</p> */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Platform Partners</h2>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+            <div className="text-2xl font-bold text-gray-400">Shopify</div>
+            <div className="text-2xl font-bold text-gray-400">Wordpress</div>
+            <div className="text-2xl font-bold text-gray-400">React</div>
+            <div className="text-2xl font-bold text-gray-400">Angular</div>
+            <div className="text-2xl font-bold text-gray-400">Laravel</div>
+            <div className="text-2xl font-bold text-gray-400">MongoDB</div>
+            <div className="text-2xl font-bold text-gray-400">Zoho</div>
+            <div className="text-2xl font-bold text-gray-400">Hubspot</div>
+            <div className="text-2xl font-bold text-gray-400">PAYPAL</div>
+            <div className="text-2xl font-bold text-gray-400">GOOGLE</div>
+            <div className="text-2xl font-bold text-gray-400">MICROSOFT</div>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- About Us Section --> */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="text-blue-200 mb-4">WHO WE ARE</p>
+            <h2 className="text-4xl font-bold mb-6">About Us</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              CodMonks is a top-tier team of passionate software engineers, designers, and strategists dedicated to transforming your ideas into powerful digital solutions that drive business growth and user engagement.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
+            <div className="stats-card">
+              <div className="text-3xl font-bold mb-2">250+</div>
+              <div className="text-blue-200">Projects Completed</div>
+            </div>
+            <div className="stats-card">
+              <div className="text-3xl font-bold mb-2">250+</div>
+              <div className="text-blue-200">Happy Clients</div>
+            </div>
+            <div className="stats-card">
+              <div className="text-3xl font-bold mb-2">5,896</div>
+              <div className="text-blue-200">Hours of Work</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- Services Section --> */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="text-blue-600 mb-4">WHAT WE DO</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Transforming Ideas into<br />
+              Intelligent Software.
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="service-card bg-blue-600 text-white p-8 rounded-xl">
+              <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg mb-6 flex items-center justify-center">
+              <FontAwesomeIcon color="currentColor" icon={faCode} />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Web Development</h3>
+              <p className="text-blue-100 mb-6">We take your product from idea to execution — designing, developing, deploying, and improving at every stage.</p>
+              <Link to="/services" className="text-white font-medium hover:underline">LEARN MORE →</Link>
+            </div>
+
+            <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
+                <FontAwesomeIcon color="currentColor" icon={faPhone} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">Mobile App Development</h3>
+              <p className="text-gray-600 mb-6">Seamless native and cross-platform mobile applications tailored for iOS and Android ecosystems.</p>
+              <Link to="/services" className="text-blue-600 font-medium hover:underline">LEARN MORE →</Link>
+            </div>
+
+            <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
+                <FontAwesomeIcon color="currentColor" icon={faImage} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">UI/UX Design</h3>
+              <p className="text-gray-600 mb-6">We craft visually stunning and easy-to-use interfaces that delight your users.</p>
+              <Link to="/services" className="text-blue-600 font-medium hover:underline">LEARN MORE →</Link>
+            </div>
+
+            <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
+              <FontAwesomeIcon color="currentColor" icon={faRankingStar} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">Quality Assurance</h3>
+              <p className="text-gray-600 mb-6">Comprehensive validation to ensure every feature works as intended — with zero surprises.</p>
+              <Link to="/services" className="text-blue-600 font-medium hover:underline">LEARN MORE →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- Experience Section --> */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-blue-600 mb-4">WHY US</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                We have over 5+ years in the industry
+              </h2>
+              <p className="text-gray-600 mb-8">
+                Our skilled team combines deep technical expertise with creative problem-solving to deliver exceptional digital solutions that exceed expectations.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <FontAwesomeIcon className="text-white" icon={faCheck} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Expert Development Team</h4>
+                    <p className="text-gray-600">Skilled professionals with extensive experience in modern technologies.</p>
+                  </div>
                 </div>
-            </section>
 
-            {/* <!-- Client Logos --> */}
-            <section className="py-12 bg-white">
-                <div className="container mx-auto px-4">
-                    <p className="text-center text-gray-500 mb-8">TRUSTED BY</p>
-                    <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-                        <div className="text-2xl font-bold text-gray-400">PAYPAL</div>
-                        <div className="text-2xl font-bold text-gray-400">GOOGLE</div>
-                        <div className="text-2xl font-bold text-gray-400">MICROSOFT</div>
-                        <div className="text-2xl font-bold text-gray-400">AIRBNB</div>
-                        <div className="text-2xl font-bold text-gray-400">NETFLIX</div>
-                    </div>
+                <div className="flex items-start">
+                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <FontAwesomeIcon className="text-white" icon={faCheck} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">24/7 Support Team</h4>
+                    <p className="text-gray-600">Round-the-clock support to ensure your project runs smoothly.</p>
+                  </div>
                 </div>
-            </section>
+              </div>
+            </div>
 
-            {/* <!-- About Us Section --> */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <p className="text-blue-200 mb-4">WHO WE ARE</p>
-                        <h2 className="text-4xl font-bold mb-6">About Us</h2>
-                        <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                            CodMonks is a top-tier team of passionate software engineers, designers, and strategists dedicated to transforming your ideas into powerful digital solutions that drive business growth and user engagement.
-                        </p>
-                    </div>
+            <div className="grid grid-cols-1 gap-4">
+              <img src="assets/images/why-us.png" alt="Team working" className="rounded-lg object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
-                        <div className="stats-card">
-                            <div className="text-3xl font-bold mb-2">250+</div>
-                            <div className="text-blue-200">Projects Completed</div>
-                        </div>
-                        <div className="stats-card">
-                            <div className="text-3xl font-bold mb-2">250+</div>
-                            <div className="text-blue-200">Happy Clients</div>
-                        </div>
-                        <div className="stats-card">
-                            <div className="text-3xl font-bold mb-2">5,896</div>
-                            <div className="text-blue-200">Hours of Work</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      {/* <!-- Client Success Section --> */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="text-blue-200 mb-4">OUR SUCCESS</p>
+            <h2 className="text-4xl font-bold mb-6">We have helped more than 200+ clients worldwide</h2>
+            <p className="text-xl text-blue-100">Our clients trust us to deliver exceptional results that drive their business forward.</p>
+          </div>
 
-            {/* <!-- Services Section --> */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <p className="text-blue-600 mb-4">WHAT WE DO</p>
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                            Transforming Ideas into<br />
-                            Intelligent Software.
-                        </h2>
-                    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <FontAwesomeIcon className="text-white" icon={faTruck} />
+              </div>
+              <h4 className="text-xl font-bold mb-2">Project Delivery</h4>
+              <p className="text-blue-100">On-time delivery with quality assurance</p>
+            </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="service-card bg-blue-600 text-white p-8 rounded-xl">
-                            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg mb-6 flex items-center justify-center">
-                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-4">Web Development</h3>
-                            <p className="text-blue-100 mb-6">Custom web applications built with modern technologies and best practices.</p>
-                            <Link to="/services" className="text-white font-medium hover:underline">LEARN MORE →</Link>
-                        </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <FontAwesomeIcon className="text-white" icon={faThumbsUp} />
+              </div>
+              <h4 className="text-xl font-bold mb-2">Client Satisfaction</h4>
+              <p className="text-blue-100">98% client satisfaction rate</p>
+            </div>
 
-                        <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                            <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
-                                <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-4 text-gray-900">Mobile App Development</h3>
-                            <p className="text-gray-600 mb-6">Native and cross-platform mobile applications for iOS and Android.</p>
-                            <Link to="/services" className="text-blue-600 font-medium hover:underline">LEARN MORE →</Link>
-                        </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <FontAwesomeIcon className="text-white" icon={faPeopleArrows} />
+              </div>
+              <h4 className="text-xl font-bold mb-2">Technical Excellence</h4>
+              <p className="text-blue-100">Cutting-edge technology solutions</p>
+            </div>
 
-                        <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                            <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
-                                <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"></path>
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-4 text-gray-900">UI/UX Design</h3>
-                            <p className="text-gray-600 mb-6">Beautiful and intuitive user interfaces that enhance user experience.</p>
-                            <Link to="/services" className="text-blue-600 font-medium hover:underline">LEARN MORE →</Link>
-                        </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <FontAwesomeIcon className="text-white" icon={faScrewdriverWrench} />
+              </div>
+              <h4 className="text-xl font-bold mb-2">Support & Maintenance</h4>
+              <p className="text-blue-100">Ongoing support and maintenance</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                        <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                            <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
-                                <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold mb-4 text-gray-900">Quality Assurance</h3>
-                            <p className="text-gray-600 mb-6">Comprehensive testing to ensure your software works flawlessly.</p>
-                            <Link to="/services" className="text-blue-600 font-medium hover:underline">LEARN MORE →</Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* <!-- Experience Section --> */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <p className="text-blue-600 mb-4">WHY US</p>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                                We have over 25+ years in the industry
-                            </h2>
-                            <p className="text-gray-600 mb-8">
-                                Our skilled team combines deep technical expertise with creative problem-solving to deliver exceptional digital solutions that exceed expectations.
-                            </p>
-
-                            <div className="space-y-6">
-                                <div className="flex items-start">
-                                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1">
-                                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">Expert Development Team</h4>
-                                        <p className="text-gray-600">Skilled professionals with extensive experience in modern technologies.</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-start">
-                                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1">
-                                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900 mb-2">24/7 Support Team</h4>
-                                        <p className="text-gray-600">Round-the-clock support to ensure your project runs smoothly.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 gap-4">
-                            <img src="assets/images/why-us.png" alt="Team working" className="rounded-lg object-cover" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* <!-- Client Success Section --> */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <p className="text-blue-200 mb-4">OUR SUCCESS</p>
-                        <h2 className="text-4xl font-bold mb-6">We have helped more than 700+ clients worldwide</h2>
-                        <p className="text-xl text-blue-100">Our clients trust us to deliver exceptional results that drive their business forward.</p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h4 className="text-xl font-bold mb-2">Project Delivery</h4>
-                            <p className="text-blue-100">On-time delivery with quality assurance</p>
-                        </div>
-
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-                                </svg>
-                            </div>
-                            <h4 className="text-xl font-bold mb-2">Client Satisfaction</h4>
-                            <p className="text-blue-100">98% client satisfaction rate</p>
-                        </div>
-
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-                                </svg>
-                            </div>
-                            <h4 className="text-xl font-bold mb-2">Technical Excellence</h4>
-                            <p className="text-blue-100">Cutting-edge technology solutions</p>
-                        </div>
-
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                                </svg>
-                            </div>
-                            <h4 className="text-xl font-bold mb-2">Support & Maintenance</h4>
-                            <p className="text-blue-100">Ongoing support and maintenance</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* <!-- Testimonials Section --> */}
-            {/* <section className="py-20 bg-white">
+      {/* <!-- Testimonials Section --> */}
+      {/* <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <p className="text-blue-600 mb-4">TESTIMONIALS</p>
@@ -283,31 +273,31 @@ const Home = () => {
                 </div>
             </section> */}
 
-            {/* <!-- Portfolio Section --> */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="grid grid-cols gap-4">
-                            <img src="assets/images/projects.png" alt="Project 1" className="rounded-lg object-cover" />
-                        </div>
+      {/* <!-- Portfolio Section --> */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols gap-4">
+              <img src="assets/images/projects.png" alt="Project 1" className="rounded-lg object-cover" />
+            </div>
 
-                        <div>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                                Our amazing project that has been completed
-                            </h2>
-                            <p className="text-gray-600 mb-8">
-                                Take a look at some of our recent projects that showcase our expertise in creating innovative digital solutions for businesses across various industries.
-                            </p>
-                            <Link to="/portfolio" className="bg-custom-gradient text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                                View Portfolio
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Our amazing project that has been completed
+              </h2>
+              <p className="text-gray-600 mb-8">
+                Take a look at some of our recent projects that showcase our expertise in creating innovative digital solutions for businesses across various industries.
+              </p>
+              <Link to="/portfolio" className="bg-custom-gradient text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                View Portfolio
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* <!-- Team Section --> */}
-            {/* <section className="py-20 bg-white">
+      {/* <!-- Team Section --> */}
+      {/* <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">Our certified experts</h2>
@@ -389,20 +379,20 @@ const Home = () => {
                 </div>
             </section> */}
 
-            {/* <!-- CTA Section --> */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-4xl font-bold mb-6">Service discount up to 30% for any project</h2>
-                    <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                        Ready to transform your ideas into reality? Get in touch with us today and let's discuss your next project.
-                    </p>
-                    <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
-                        Get Started Now
-                    </Link>
-                </div>
-            </section>
-        </>
-    )
+      {/* <!-- CTA Section --> */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Service discount up to 30% for any project</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Ready to transform your ideas into reality? Get in touch with us today and let's discuss your next project.
+          </p>
+          <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+            Get Started Now
+          </Link>
+        </div>
+      </section>
+    </>
+  )
 }
 
 export default Home;

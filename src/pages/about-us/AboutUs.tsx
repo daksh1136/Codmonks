@@ -26,10 +26,10 @@ const AboutUs = () => {
                                 Founded on Innovation and Excellence
                             </h2>
                             <p className="text-gray-600 mb-6">
-                                CodMonks was born from a simple yet powerful vision: to bridge the gap between complex technology and elegant solutions. Founded in 2018 by a group of passionate developers and designers, we started as a small team with big dreams.
+                                CodMonks was born from a simple yet powerful vision: to bridge the gap between complex technology and elegant solutions. Founded in 2019 by a group of passionate developers and designers, we started as a small team with big dreams.
                             </p>
                             <p className="text-gray-600 mb-6">
-                                What began as late-night coding sessions and endless brainstorming has evolved into a thriving digital agency that has helped over 700+ clients worldwide transform their ideas into successful digital products.
+                                What began as late-night coding sessions and endless brainstorming has evolved into a thriving digital agency that has helped over 250+ clients worldwide transform their ideas into successful digital products.
                             </p>
                             <p className="text-gray-600 mb-8">
                                 Today, we continue to push boundaries, embrace new technologies, and maintain our commitment to delivering exceptional results that exceed expectations.

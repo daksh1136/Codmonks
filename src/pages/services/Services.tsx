@@ -74,9 +74,9 @@ const Services = () => {
                                     Modern Technologies
                                 </li>
                             </ul>
-                            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                            <a href="#design-development" className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
                                 Explore Development Services
-                            </button>
+                            </a>
                         </div>
 
                         {/* <!-- Digital Marketing --> */}
@@ -110,9 +110,9 @@ const Services = () => {
                                     ROI-Focused Results
                                 </li>
                             </ul>
-                            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                            <a href="#digital-marketing" className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
                                 Explore Marketing Services
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -149,9 +149,9 @@ const Services = () => {
                                 <li>• Visual Design & Branding</li>
                                 <li>• Usability Testing</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Front End Development --> */}
@@ -171,9 +171,9 @@ const Services = () => {
                                 <li>• Progressive Web Apps</li>
                                 <li>• Performance Optimization</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- E-commerce Development --> */}
@@ -193,9 +193,9 @@ const Services = () => {
                                 <li>• Inventory Management</li>
                                 <li>• Multi-vendor Platforms</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Mobile App Development --> */}
@@ -215,9 +215,9 @@ const Services = () => {
                                 <li>• App Store Optimization</li>
                                 <li>• Push Notifications</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- CMS Development --> */}
@@ -237,9 +237,9 @@ const Services = () => {
                                 <li>• Content Migration</li>
                                 <li>• Multi-site Management</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Backend Development --> */}
@@ -259,9 +259,9 @@ const Services = () => {
                                 <li>• API Development & Integration</li>
                                 <li>• Cloud Infrastructure</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Custom Web Development --> */}
@@ -281,9 +281,9 @@ const Services = () => {
                                 <li>• Third-party Integrations</li>
                                 <li>• Legacy System Modernization</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Fullstack Development --> */}
@@ -303,9 +303,9 @@ const Services = () => {
                                 <li>• DevOps & Deployment</li>
                                 <li>• Maintenance & Support</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- ERP Development --> */}
@@ -325,9 +325,9 @@ const Services = () => {
                                 <li>• Workflow Automation</li>
                                 <li>• Reporting & Analytics</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- CRM Development --> */}
@@ -347,9 +347,9 @@ const Services = () => {
                                 <li>• Sales Pipeline Tracking</li>
                                 <li>• Customer Analytics</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- RPA --> */}
@@ -370,9 +370,9 @@ const Services = () => {
                                 <li>• Workflow Optimization</li>
                                 <li>• Integration Solutions</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Software Testing & QA --> */}
@@ -392,9 +392,9 @@ const Services = () => {
                                 <li>• Security Testing</li>
                                 <li>• User Acceptance Testing</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
@@ -431,9 +431,9 @@ const Services = () => {
                                 <li>• Link Building & Content</li>
                                 <li>• Local SEO Optimization</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Social Media Optimization --> */}
@@ -453,9 +453,9 @@ const Services = () => {
                                 <li>• Hashtag Research</li>
                                 <li>• Cross-platform Integration</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Social Media Marketing --> */}
@@ -475,9 +475,9 @@ const Services = () => {
                                 <li>• Social Media Advertising</li>
                                 <li>• Analytics & Reporting</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Paid Media Marketing --> */}
@@ -497,9 +497,9 @@ const Services = () => {
                                 <li>• Display Advertising</li>
                                 <li>• Retargeting Campaigns</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Influencer Marketing --> */}
@@ -519,9 +519,9 @@ const Services = () => {
                                 <li>• Content Collaboration</li>
                                 <li>• Performance Tracking</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Email Marketing --> */}
@@ -541,9 +541,9 @@ const Services = () => {
                                 <li>• Automation Workflows</li>
                                 <li>• A/B Testing & Analytics</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
 
                         {/* <!-- Mobile App Marketing --> */}
@@ -563,9 +563,9 @@ const Services = () => {
                                 <li>• In-app Marketing</li>
                                 <li>• Retention Strategies</li>
                             </ul>
-                            <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+                            {/* <Link to="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
                                 Learn More →
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
