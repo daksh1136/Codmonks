@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faCircleCheck, faCode, faImage, faPeopleArrows, faPhone, faRankingStar, faScrewdriverWrench, faThumbsUp, faTruck } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faCode, faImage, faPeopleArrows, faPhone, faRankingStar, faScrewdriverWrench, faThumbsUp, faTruck } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   return (
