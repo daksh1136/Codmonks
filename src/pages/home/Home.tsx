@@ -36,18 +36,40 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Platform Partners</h2>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="text-2xl font-bold text-gray-400">Shopify</div>
-            <div className="text-2xl font-bold text-gray-400">Wordpress</div>
-            <div className="text-2xl font-bold text-gray-400">React</div>
-            <div className="text-2xl font-bold text-gray-400">Angular</div>
-            <div className="text-2xl font-bold text-gray-400">Laravel</div>
-            <div className="text-2xl font-bold text-gray-400">MongoDB</div>
-            <div className="text-2xl font-bold text-gray-400">Zoho</div>
-            <div className="text-2xl font-bold text-gray-400">Hubspot</div>
-            <div className="text-2xl font-bold text-gray-400">PAYPAL</div>
-            <div className="text-2xl font-bold text-gray-400">GOOGLE</div>
-            <div className="text-2xl font-bold text-gray-400">MICROSOFT</div>
+          <div className="partner-wrap flex flex-wrap justify-center items-center gap-4">
+            <div className="partner">
+              <img src="assets/images/shopify.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/mongodb.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/wordpress.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/microsoft-logo.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/react.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/angular.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/hobspot.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/Laravel-Logo.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/zoho-logo.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/PayPal-Logo.png" alt="" />
+            </div>
+            <div className="partner">
+              <img src="assets/images/google.png" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -94,7 +116,7 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="service-card bg-blue-600 text-white p-8 rounded-xl">
               <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg mb-6 flex items-center justify-center">
-              <FontAwesomeIcon color="currentColor" icon={faCode} />
+                <FontAwesomeIcon color="currentColor" icon={faCode} />
               </div>
               <h3 className="text-xl font-bold mb-4">Web Development</h3>
               <p className="text-blue-100 mb-6">We take your product from idea to execution — designing, developing, deploying, and improving at every stage.</p>
@@ -121,7 +143,7 @@ const Home = () => {
 
             <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
-              <FontAwesomeIcon color="currentColor" icon={faRankingStar} />
+                <FontAwesomeIcon color="currentColor" icon={faRankingStar} />
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">Quality Assurance</h3>
               <p className="text-gray-600 mb-6">Comprehensive validation to ensure every feature works as intended — with zero surprises.</p>

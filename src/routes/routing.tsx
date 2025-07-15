@@ -7,6 +7,8 @@ import Portfolio from '../pages/portfolio/Portfolio';
 import Blog from '../pages/blogs/Blog';
 import BlogDetail from '../pages/blogs/BlogDetail';
 import Contact from '../pages/contact-us/Contact';
+import PrivacyPolicy from '../pages/legal/PrivacyPolicy';
+import TermsAndConditions from '../pages/legal/TermsAndConditions';
 
 const appRoutes = [
     { path: '/', element: <Home /> },
@@ -17,6 +19,8 @@ const appRoutes = [
     { path: '/blogs', element: <Blog /> },
     { path: '/blogs/:id', element: <BlogDetail /> },
     { path: '/contact', element: <Contact /> },
+    { path: '/privacy-policy', element: <PrivacyPolicy /> },
+    { path: '/terms-and-conditions', element: <TermsAndConditions /> }
 ];
 
 export default appRoutes;

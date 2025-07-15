@@ -19,6 +19,13 @@ body {
     }
 }
 
+code,
+kbd,
+samp,
+pre {
+    font-family: 'Geist', sans-serif;
+}
+
 .font-Geist {
     font-family: 'Geist', sans-serif;
 }
@@ -139,6 +146,22 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #2563eb;
+}
+
+.partner-wrap {
+    .partner {
+        height: 80px;
+        width: 80px;
+        padding: 5px;
+        background-color: #f6f6f6;
+        display: flex;
+        border-radius: 6px;
+        align-items: center;
+
+        img {
+            width: 80px;
+        }
+    }
 }
 
 // Mobile responsive adjustments

@@ -14,8 +14,10 @@ const companyLinks = [
   { label: 'About Us', path: '/about-us' },
   { label: 'Technologies', path: '/technologies' },
   { label: 'Portfolio', path: '/portfolio' },
-  { label: 'Blog', path: 'blog' },
-  { label: 'Contact', path: 'contact' },
+  { label: 'Blog', path: '/blog' },
+  { label: 'Contact', path: '/contact' },
+  { label: 'Privacy Policy', path: '/privacy-policy' },
+  { label: 'T & C', path: '/terms-and-conditions' },
 ];
 
 const Footer = () => {
@@ -79,7 +81,7 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
               <div className="space-y-3 text-blue-200">
                 <p><FontAwesomeIcon icon={faPhone} /> +91 9718964932</p>
-                <Link to="mailto:sales@codmonks.com"><FontAwesomeIcon icon={faEnvelope}/> sales@codmonks.com</Link>
+                <Link to="mailto:sales@codmonks.com"><FontAwesomeIcon icon={faEnvelope} /> sales@codmonks.com</Link>
                 <p><FontAwesomeIcon icon={faLocationDot} /> 769, Sec - 64, Ballabhgarh, Faridabad, Haryana - 121004</p>
               </div>
             </div>
