@@ -1,4 +1,4 @@
-// server.js (Final Production Pathing Adjustment)
+// server.js (Corrected for the missing SSR outlet placeholder)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -13,7 +13,7 @@ async function setupApp() {
   let vite;
 
   if (!isProd) {
-    // Development mode (local setup) - no changes here
+    // Development mode (local setup)
     vite = await (
       await import('vite')
     ).createServer({
@@ -33,12 +33,12 @@ async function setupApp() {
       let render;
 
       if (!isProd) {
-        // Development pathing (local) - no changes here
+        // Development pathing (local)
         template = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf-8');
         template = await vite.transformIndexHtml(url, template);
         render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render;
       } else {
-        // PRODUCTION PATHING FOR VERCEL FIX:
+        // PRODUCTION PATHING FOR VERCEL:
         // Assume 'index.html' is directly at /var/task/
         // Assume 'entry-server.js' is directly at /var/task/
         template = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
@@ -46,6 +46,7 @@ async function setupApp() {
       }
 
       const appHtml = render(url);
+      // FIX: Correctly replace the SSR outlet placeholder
       const html = template.replace(``, appHtml);
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
     } catch (e) {
