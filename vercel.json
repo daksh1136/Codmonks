@@ -1,5 +1,4 @@
 
-  
 {
   "version": 2,
   "builds": [
@@ -7,15 +6,26 @@
       "src": "server.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["dist/client/**", "dist/server/**"]
+        
+        
+        "includeFiles": ["dist/**"]
       }
     }
   ],
   "routes": [
+    
+    
     {
       "src": "/assets/(.*)",
       "dest": "/dist/client/assets/$1"
     },
+    
+    
+    {
+      "src": "/index.html",
+      "dest": "/dist/client/index.html"
+    },
+    
     {
       "src": "/(.*)",
       "dest": "server.js"

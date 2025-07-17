@@ -1,70 +1,60 @@
-// server.js
+// server.js (Focus on the production pathing)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
 
-// Resolve __dirname equivalent for ES modules
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isProd = process.env.NODE_ENV === 'production';
 
 async function createServer() {
-  const app = express(); // 'app' is defined here
+  const app = express();
 
   let vite;
   if (!isProd) {
-    // In development, use Vite's dev server middleware
-    vite = await (
-      await import('vite')
-    ).createServer({
-      server: { middlewareMode: true },
-      appType: 'custom',
-    });
-    app.use(vite.middlewares);
+    // Development mode (local setup)
+    // ... (rest of dev code - this pathing is fine locally) ...
   } else {
-    // In production, serve static assets from the client build
+    // Production mode (Vercel)
+    // Serve static assets from the client build
+    // This is primarily for files not caught by the Vercel routes like favicon etc.
     app.use('/assets', express.static(path.resolve(__dirname, 'dist/client/assets')));
   }
 
-  // Universal route handler for all incoming requests
-  // THIS app.use CALL MUST BE INSIDE createServer() after app is defined
   app.use(async (req, res, next) => {
-    const url = req.originalUrl; // This already gets the URL
+    const url = req.originalUrl;
 
     try {
       let template;
       let render;
 
       if (!isProd) {
-        // 1. Read index.html from project root
+        // Development pathing
         template = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf-8');
-        // 2. Apply Vite HTML transforms. This injects the Vite HMR client and
-        //    also applies HTML transforms from Vite plugins (e.g., @vitejs/plugin-react)
         template = await vite.transformIndexHtml(url, template);
-        // 3. Load the server entry. vite.ssrLoadModule automatically transforms your ESM source code to be usable in Node.js!
         render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render;
       } else {
-        // In production, read the pre-built index.html and server entry
-        template = fs.readFileSync(path.resolve(__dirname, 'dist/client/index.html'), 'utf-8');
-        // Import the pre-built server bundle
-        render = (await import('./dist/server/entry-server.js')).render;
+        // PRODUCTION PATHING FIX:
+        // When deployed to Vercel, server.js is likely in /var/task/.
+        // And 'dist' folder is copied directly into /var/task/ due to "includeFiles": ["dist/**"]
+        // So, the paths are relative to /var/task/
+        const clientRoot = path.resolve(__dirname, 'dist', 'client');
+        const serverRoot = path.resolve(__dirname, 'dist', 'server');
+
+        template = fs.readFileSync(path.join(clientRoot, 'index.html'), 'utf-8');
+        // Import the pre-built server bundle (it's a JS file, so no 'tsx' extension)
+        render = (await import(path.join(serverRoot, 'entry-server.js'))).render;
       }
 
-      // 4. Render the React app HTML. Pass the URL here!
-      const appHtml = render(url); // Pass the URL to the render function
-
-      // 5. Inject the app-rendered HTML into the template placeholder
+      const appHtml = render(url);
       const html = template.replace(``, appHtml);
-
-      // 6. Send the complete HTML response
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
     } catch (e) {
-      // If an error is caught, let Vite fix it.
       if (!isProd) {
         vite.ssrFixStacktrace(e);
       }
-      console.error(e.stack);
-      res.status(500).end(e.stack);
+      console.error("SSR Error:", e.stack); // Added more context to error logging
+      res.status(500).end(`SSR Error: ${e.message}<pre>${e.stack}</pre>`); // Provide more info to client
     }
   });
 
