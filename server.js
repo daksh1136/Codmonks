@@ -16,8 +16,8 @@ const isProd = process.env.NODE_ENV === 'production';
 // They are likely at the root of the serverless function bundle.
 // Example: /var/task/client/index.html
 //          /var/task/server/entry-server.js
-const CLIENT_BUILD_PATH = path.resolve(__dirname, 'client'); // This refers to the 'client' dir *inside* the serverless bundle
-const SERVER_BUILD_PATH = path.resolve(__dirname, 'server'); // This refers to the 'server' dir *inside* the serverless bundle
+const CLIENT_BUILD_PATH = path.resolve(__dirname, 'dist', 'client');  // This refers to the 'client' dir *inside* the serverless bundle
+const SERVER_BUILD_PATH = path.resolve(__dirname, 'dist', 'server'); // This refers to the 'server' dir *inside* the serverless bundle
 
 const app = express(); // Initialize Express app
 
