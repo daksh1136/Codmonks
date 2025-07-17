@@ -1,3 +1,4 @@
+
 {
   "version": 2,
   "builds": [
@@ -5,18 +6,30 @@
       "src": "server.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["dist/**"]
+        
+        "includeFiles": [
+          "dist/client/**", 
+          "dist/server/**"  
+        ]
       }
     }
   ],
-  "routes": [    {
+  "routes": [
+    
+    
+    
+    {
       "src": "/assets/(.*)",
       "dest": "/dist/client/assets/$1"
-    },    {
+    },
+    
+    {
       "src": "/(.*)",
       "dest": "server.js"
     }
   ],
+  
+  
   "outputDirectory": "dist",
   "buildCommand": "npm run build"
 }
