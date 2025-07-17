@@ -1,7 +1,7 @@
-// server.js (Corrected for the missing SSR outlet placeholder)
+// server.js (Adding Diagnostic Logging)
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath } = import 'node:url';
 import express from 'express';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -22,7 +22,26 @@ async function setupApp() {
     });
     app.use(vite.middlewares);
   } else {
-    // Production mode (Vercel) - no changes to this block
+    // Production mode (Vercel)
+    // DIAGNOSTIC LOGGING: Check available files in /var/task/
+    console.log('--- Vercel Runtime Paths ---');
+    console.log('__dirname:', __dirname);
+    try {
+      console.log('Files in /var/task/:', fs.readdirSync(__dirname));
+      // If 'dist' folder appears, check its contents too
+      if (fs.existsSync(path.join(__dirname, 'dist'))) {
+        console.log('Files in /var/task/dist/:', fs.readdirSync(path.join(__dirname, 'dist')));
+      }
+      if (fs.existsSync(path.join(__dirname, 'dist/client'))) {
+        console.log('Files in /var/task/dist/client/:', fs.readdirSync(path.join(__dirname, 'dist/client')));
+      }
+      if (fs.existsSync(path.join(__dirname, 'dist/server'))) {
+        console.log('Files in /var/task/dist/server/:', fs.readdirSync(path.join(__dirname, 'dist/server')));
+      }
+    } catch (e) {
+      console.error('Error listing directory contents:', e);
+    }
+    console.log('----------------------------');
   }
 
   app.use(async (req, res, next) => {
@@ -39,14 +58,12 @@ async function setupApp() {
         render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render;
       } else {
         // PRODUCTION PATHING FOR VERCEL:
-        // Assume 'index.html' is directly at /var/task/
-        // Assume 'entry-server.js' is directly at /var/task/
+        // Attempt to import using the direct path
         template = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
         render = (await import(path.join(__dirname, 'entry-server.js'))).render;
       }
 
       const appHtml = render(url);
-      // FIX: Correctly replace the SSR outlet placeholder
       const html = template.replace(``, appHtml);
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
     } catch (e) {
