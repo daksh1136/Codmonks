@@ -7,9 +7,11 @@
       "use": "@vercel/node",
       "config": {
         
+        
         "includeFiles": [
-          "dist/client/**", 
-          "dist/server/**"  
+          "dist/client/index.html", 
+          "dist/client/assets/**",  
+          "dist/server/entry-server.js" 
         ]
       }
     }
@@ -17,19 +19,17 @@
   "routes": [
     
     
-    
     {
       "src": "/assets/(.*)",
       "dest": "/dist/client/assets/$1"
     },
+    
     
     {
       "src": "/(.*)",
       "dest": "server.js"
     }
   ],
-  
-  
   "outputDirectory": "dist",
   "buildCommand": "npm run build"
 }

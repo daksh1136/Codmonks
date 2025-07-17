@@ -1,4 +1,4 @@
-// server.js (Focus on production paths)
+// server.js (Final Production Pathing Adjustment)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -13,7 +13,7 @@ async function setupApp() {
   let vite;
 
   if (!isProd) {
-    // Development mode (local setup) - standard Vite dev server
+    // Development mode (local setup) - no changes here
     vite = await (
       await import('vite')
     ).createServer({
@@ -22,11 +22,9 @@ async function setupApp() {
     });
     app.use(vite.middlewares);
   } else {
-    // Production mode (Vercel)
-    // No need for app.use('/assets') here, as Vercel's routes handle static assets.
+    // Production mode (Vercel) - no changes to this block
   }
 
-  // Universal route handler for all incoming requests not handled by Vercel's static routes
   app.use(async (req, res, next) => {
     const url = req.originalUrl;
 
@@ -35,18 +33,16 @@ async function setupApp() {
       let render;
 
       if (!isProd) {
-        // Development pathing (local)
+        // Development pathing (local) - no changes here
         template = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf-8');
         template = await vite.transformIndexHtml(url, template);
         render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render;
       } else {
         // PRODUCTION PATHING FOR VERCEL FIX:
-        // Assume 'client' and 'server' directories are at the root of /var/task/
-        const clientBuildDir = path.resolve(__dirname, 'client');
-        const serverBuildDir = path.resolve(__dirname, 'server');
-
-        template = fs.readFileSync(path.join(clientBuildDir, 'index.html'), 'utf-8');
-        render = (await import(path.join(serverBuildDir, 'entry-server.js'))).render;
+        // Assume 'index.html' is directly at /var/task/
+        // Assume 'entry-server.js' is directly at /var/task/
+        template = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
+        render = (await import(path.join(__dirname, 'entry-server.js'))).render;
       }
 
       const appHtml = render(url);
