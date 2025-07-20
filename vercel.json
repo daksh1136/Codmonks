@@ -7,12 +7,10 @@
       "src": "server.js", 
       "use": "@vercel/node",
       "config": {
-        
-        
         "includeFiles": [
-          "dist/client/index.html",     
-          "dist/client/assets/**",      
-          "dist/server/entry-server.js" 
+          "dist/client/index.html",
+          "dist/client/assets/**",
+          "dist/server/entry-server.js"
         ]
       }
     },

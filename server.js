@@ -51,11 +51,14 @@ async function setupApp() {
       let template;
       let render;
 
-      if (!isProd) {
-        // Development pathing (local)
-        template = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf-8');
-        template = await vite.transformIndexHtml(url, template);
-        render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render;
+      if (isProd) {
+        const template = fs.readFileSync(path.join(__dirname, 'dist/client/index.html'), 'utf-8');
+        const { render } = await import(path.join(__dirname, 'dist/server/entry-server.js'));
+        const appHtml = render(url);
+        const html = template.replace(`<!--app-html-->`, appHtml); // make sure your index.html has this marker
+        res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
+        console.log("Trying to load:", path.join(__dirname, 'dist/client/index.html'));
+        console.log("Trying to load:", path.join(__dirname, 'dist/server/entry-server.js'));
       } else {
         // PRODUCTION PATHING FOR VERCEL:
         // Attempt to import using the direct path
