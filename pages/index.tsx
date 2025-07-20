@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Home Page</title>
+        <title>CodMonks Technologies</title>
         <meta name="description" content="Welcome to the home page" />
       </Head>
       {/* <!-- Hero Section --> */}

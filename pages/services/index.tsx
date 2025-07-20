@@ -1,6 +1,12 @@
+import Head from "next/head";
+
 const Services = () => {
     return (
         <>
+            <Head>
+                <title>Services | CodMonks</title>
+                <meta name="description" content="Welcome to the home page" />
+            </Head>
 
             {/* Hero Section */}
             <section className="relative py-20 px-4 overflow-hidden">

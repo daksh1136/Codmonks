@@ -1,6 +1,12 @@
+import Head from "next/head";
+
 const AboutUs = () => {
     return (
         <>
+            <Head>
+                <title>About Us | CodMonks</title>
+                <meta name="description" content="Welcome to the home page" />
+            </Head>
             {/* Hero Section */}
             <section className="relative py-20 px-4 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>

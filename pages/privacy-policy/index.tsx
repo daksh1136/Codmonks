@@ -1,5 +1,12 @@
+import Head from "next/head";
+
 const PrivacyPolicy = () => {
     return (
+        <>
+        <Head>
+            <title>Privacy Policy | CodMonks</title>
+            <meta name="description" content="Welcome to the home page" />
+        </Head>
         <div className="max-w-4xl mx-auto px-4 py-16 text-gray-800">
             <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
 
@@ -53,6 +60,7 @@ const PrivacyPolicy = () => {
                 </a>.
             </p>
         </div>
+        </>
     );
 };
 

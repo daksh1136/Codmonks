@@ -1,7 +1,13 @@
+import Head from "next/head";
 
 const Portfolio = () => {
 
     return (
+        <>
+        <Head>
+            <title>Portfolio | CodMonks</title>
+            <meta name="description" content="Welcome to the home page" />
+        </Head>
         <div className="min-h-screen bg-background">
             {/* <!-- Hero Section --> */}
             <section className="relative py-20 px-4 overflow-hidden">
@@ -274,6 +280,7 @@ const Portfolio = () => {
                 </div>
             </section>
         </div>
+        </>
     );
 };
 

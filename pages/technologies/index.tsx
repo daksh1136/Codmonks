@@ -1,5 +1,6 @@
 
 import { Code, Database, Cloud, Globe, Server } from "lucide-react";
+import Head from "next/head";
 import Link from "next/link";
 // import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 // import { Badge } from "@/components/ui/badge";
@@ -97,6 +98,10 @@ const Technologies = () => {
 
     return (
         <>
+            <Head>
+                <title>Technologies | CodMonks</title>
+                <meta name="description" content="Welcome to the home page" />
+            </Head>
             {/* Hero Section */}
             <section className="relative py-20 px-4 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
