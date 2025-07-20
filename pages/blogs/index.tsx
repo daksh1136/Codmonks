@@ -1,10 +1,44 @@
+// pages/blogs/index.tsx
 import Link from 'next/link';
-import { blogList } from './BlogData'; // adjust path as needed
+import Head from 'next/head'; // Added Head for better SEO
+import { blogList } from '../../data/BlogData'; 
+import React from 'react'; // Added React import for TS
 
-const Blog = () => {
+// ---
+// Define types for blog items for clarity in this component
+interface BlogListItem {
+    id: string;
+    title: string;
+    description: string;
+    author: string;
+    date: string;
+    readTime: string;
+    tags: string[];
+    image: string;
+}
 
+interface BlogListProps {
+  blogs: BlogListItem[];
+}
+
+// ---
+// getStaticProps to fetch blog list at build time
+export async function getStaticProps() {
+    // We only need a subset of data for the list view (no 'content' Markdown)
+    const blogsForList = blogList.map(({ content, ...rest }) => rest);
+
+    return {
+        props: {
+            blogs: blogsForList,
+        },
+    };
+}
+
+// ---
+// Your Blog (List) Component
+const Blog = ({ blogs }: BlogListProps) => { // Accept 'blogs' as a prop
     const getTagCountMap = () => {
-        return blogList.reduce((acc, blog) => {
+        return blogs.reduce((acc, blog) => { // Use 'blogs' from props
             blog.tags.forEach(tag => {
                 acc[tag] = (acc[tag] || 0) + 1;
             });
@@ -12,22 +46,32 @@ const Blog = () => {
         }, {} as Record<string, number>);
     };
 
+    const featuredBlog = blogs[0]; // Use blogs from props
+    const recentBlogs = blogs.slice(1); // Use blogs from props
+    const popularPosts = blogs.slice(0, 3); // Use blogs from props
 
-    // Get latest 3 popular posts
-    const popularPosts = blogList.slice(0, 3);
-
-    const featuredBlog = blogList[0];
-    const recentBlogs = blogList.slice(1);
+    if (!blogs || blogs.length === 0) {
+      return (
+        <div className="min-h-screen bg-background flex justify-center items-center">
+          <p>No blog posts found.</p>
+        </div>
+      );
+    }
 
     return (
         <div className="min-h-screen bg-background">
+            <Head>
+                <title>Blog - Latest Articles | CodMonks</title>
+                <meta name="description" content="Stay updated with the latest trends, tutorials, and insights from the world of technology and development." />
+            </Head>
+
             {/* Hero Section */}
             <section className="relative py-20 px-4 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
                 <div className="absolute inset-0 bg-black/10"></div>
 
                 <div className="relative max-w-6xl mx-auto text-center text-white">
-                <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Our Blog</h1>
+                    <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Our Blog</h1>
                     <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
                         Stay updated with the latest trends, tutorials, and insights from the world of technology and development.
                     </p>
@@ -43,42 +87,44 @@ const Blog = () => {
                             {/* Featured Post */}
                             <div className="mb-12">
                                 <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Article</h2>
-                                <Link href={`/blogs/${featuredBlog.id}`}>
-                                    <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                                        <div className="aspect-video bg-gradient-to-r from-primary to-secondary relative overflow-hidden bg-[length:100%]"
-                                            style={{ backgroundImage: `url(${featuredBlog.image})` }}>
-                                            <div className="absolute inset-0 bg-black/20"></div>
-                                            <div className="absolute bottom-6 left-6 right-6">
-                                                <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
-                                                    {featuredBlog.tags?.[0] || 'General'}
-                                                </span>
-                                                <h3 className="text-2xl font-bold text-white mb-2">
-                                                    {featuredBlog.title}
-                                                </h3>
-                                            </div>
-                                        </div>
-                                        <div className="p-8">
-                                            <p className="text-gray-600 mb-4 leading-relaxed">
-                                                {featuredBlog.description}
-                                            </p>
-                                            <div className="flex items-center justify-between">
-                                                <div className="flex items-center space-x-3">
-                                                    <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
-                                                        <span className="text-white font-semibold text-sm">CM</span>
-                                                    </div>
-                                                    <div>
-                                                        <p className="font-semibold text-gray-900">{featuredBlog.author || 'CodMonks Team'}</p>
-                                                        <p className="text-sm text-gray-500">{featuredBlog.date}</p>
-                                                    </div>
-                                                </div>
-                                                <div className="inline-flex items-center text-primary hover:text-secondary font-semibold">
-                                                    Read More
-                                                    <i data-lucide="arrow-right" className="ml-2 w-4 h-4"></i>
+                                {featuredBlog && ( // Conditional render if featuredBlog exists
+                                    <Link href={`/blogs/${featuredBlog.id}`}>
+                                        <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                                            <div className="aspect-video bg-gradient-to-r from-primary to-secondary relative overflow-hidden bg-[length:100%]"
+                                                style={{ backgroundImage: `url(${featuredBlog.image})` }}>
+                                                <div className="absolute inset-0 bg-black/20"></div>
+                                                <div className="absolute bottom-6 left-6 right-6">
+                                                    <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+                                                        {featuredBlog.tags?.[0] || 'General'}
+                                                    </span>
+                                                    <h3 className="text-2xl font-bold text-white mb-2">
+                                                        {featuredBlog.title}
+                                                    </h3>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </article>
-                                </Link>
+                                            <div className="p-8">
+                                                <p className="text-gray-600 mb-4 leading-relaxed">
+                                                    {featuredBlog.description}
+                                                </p>
+                                                <div className="flex items-center justify-between">
+                                                    <div className="flex items-center space-x-3">
+                                                        <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                                                            <span className="text-white font-semibold text-sm">CM</span>
+                                                        </div>
+                                                        <div>
+                                                            <p className="font-semibold text-gray-900">{featuredBlog.author || 'CodMonks Team'}</p>
+                                                            <p className="text-sm text-gray-500">{featuredBlog.date}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="inline-flex items-center text-primary hover:text-secondary font-semibold">
+                                                        Read More
+                                                        <i data-lucide="arrow-right" className="ml-2 w-4 h-4"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </Link>
+                                )}
                             </div>
 
                             {/* Recent Posts */}

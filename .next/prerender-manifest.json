@@ -1,11 +1,131 @@
 {
   "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
+  "routes": {
+    "/blogs": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blogs/future-web-dev": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blogs/[id]",
+      "dataRoute": "/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs/future-web-dev.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blogs/responsive-css": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blogs/[id]",
+      "dataRoute": "/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs/responsive-css.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blogs/mobile-dev": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blogs/[id]",
+      "dataRoute": "/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs/mobile-dev.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blogs/seo-best-practices": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blogs/[id]",
+      "dataRoute": "/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs/seo-best-practices.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blogs/react-hooks-guide": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blogs/[id]",
+      "dataRoute": "/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs/react-hooks-guide.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blogs/db-optimization": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blogs/[id]",
+      "dataRoute": "/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs/db-optimization.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/blogs/api-security": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/blogs/[id]",
+      "dataRoute": "/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs/api-security.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
+  "dynamicRoutes": {
+    "/blogs/[id]": {
+      "routeRegex": "^/blogs/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs/[id].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/DWtS5Kbr3FT_KlngyHZSM/blogs/([^/]+?)\\.json$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "ece698eed11e5b8c0864b8cc316c0b94",
-    "previewModeSigningKey": "e973bf2ae739752c7d87fb8c6bb3158da01432c7db4cad1abf8e6981e519d5f5",
-    "previewModeEncryptionKey": "2794b845c674037fac913b81c59a8351e8c61b5f2f9806bc4d49d46e6a2f616e"
+    "previewModeId": "d6bf0157c186376fa947cb87f8de0663",
+    "previewModeSigningKey": "5f58469e049d0b6db7c9ac4a4abda6d346aaf5a20616dd04ccd7dcc7cb96a2a6",
+    "previewModeEncryptionKey": "7e94b23e599fb0a56905a508ade419d10a2c7e91772020712a4fd423d8943988"
   }
 }
