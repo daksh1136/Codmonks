@@ -421,7 +421,7 @@ const Services = () => {
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4">Search Engine Optimization</h3>
                             <p className="text-gray-600 mb-6">
-                                Improve your website's visibility and ranking on search engines to drive organic traffic and leads.
+                                Improve your website’s visibility and ranking on search engines to drive organic traffic and leads.
                             </p>
                             <ul className="space-y-2 text-sm text-gray-600 mb-6">
                                 <li>• Keyword Research & Strategy</li>

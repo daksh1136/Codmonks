@@ -190,7 +190,7 @@ const Technologies = () => {
                         Ready to Build Something Amazing?
                     </h2>
                     <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-                        Let's discuss how our technology expertise can transform your ideas into reality.
+                        Let’s discuss how our technology expertise can transform your ideas into reality.
                         Our team is ready to tackle your next big project.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,20 +1,26 @@
 import { useState } from "react";
 import PageLoader from "./PageLoader/PageLoader";
-
+import React from 'react'; // <--- ADD THIS LINE: Import React if you haven't already
+                           //      This is necessary for React.FormEvent
 
 export default function ContactForm() {
   const [status, setStatus] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: any) => {
+  // Correctly type 'e' as a React.FormEvent
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("Sending...");
     setIsLoading(true);
+
+    // To access the form elements by name, you need to cast e.target to HTMLFormElement
+    const form = e.target as HTMLFormElement; // Cast e.target to HTMLFormElement
+
     const formData = new FormData();
-    formData.append("name", e.target.name.value);
-    formData.append("email", e.target.email.value);
-    formData.append("phone", e.target.phone.value);
-    formData.append("message", e.target.message.value);
+    formData.append("name", (form.elements.namedItem("name") as HTMLInputElement).value);
+    formData.append("email", (form.elements.namedItem("email") as HTMLInputElement).value);
+    formData.append("phone", (form.elements.namedItem("phone") as HTMLInputElement).value);
+    formData.append("message", (form.elements.namedItem("message") as HTMLTextAreaElement).value);
 
 
     try {
@@ -27,7 +33,7 @@ export default function ContactForm() {
       if (result.result === "success") {
         setStatus("Message Sent!");
         setIsLoading(false);
-        e.target.reset();
+        form.reset(); // Use the 'form' variable for reset
       } else {
         setStatus("Something went wrong.");
         setIsLoading(false);
@@ -47,9 +53,10 @@ export default function ContactForm() {
                 { (status) ? <h3 className="bg-green-100 border border-green-300 text-green-800 px-4 py-3 rounded-md text-center mb-3">{status}</h3> : '' }
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
                     <div className="col-span-2">
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                         <input
                             type="text"
+                            id="fullName" // Added ID for label association
                             name="name"
                             placeholder="Your Name"
                             className="w-full border border-gray-300 p-3 rounded-xl focus:ring-indigo-500 focus:border-indigo-500"
@@ -57,9 +64,10 @@ export default function ContactForm() {
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <label htmlFor="emailAddress" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                         <input
                             type="email"
+                            id="emailAddress" // Added ID for label association
                             name="email"
                             required
                             placeholder="you@example.com"
@@ -67,9 +75,10 @@ export default function ContactForm() {
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
                         <input
                             type="tel"
+                            id="phoneNumber" // Added ID for label association
                             name="phone"
                             placeholder=""
                             maxLength={10}
@@ -78,10 +87,10 @@ export default function ContactForm() {
                         />
                     </div>
                     <div className="col-span-2">
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <label htmlFor="messageText" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                         <textarea
+                            id="messageText" // Added ID for label association
                             name="message"
-
                             placeholder="Tell us about your project..."
                             className="w-full border border-gray-300 p-3 rounded-xl focus:ring-indigo-500 focus:border-indigo-500"
                         ></textarea>

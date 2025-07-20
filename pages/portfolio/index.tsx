@@ -200,7 +200,7 @@ const Portfolio = () => {
                                     <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">SEO Project</span>
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">Local Business SEO</h3> */}
-                                <p className="text-gray-600 mb-4">Founded in 2015, VAPO was established to deliver premium, high-quality e-cigarette products that differed from those available on the market at the time. Since launching our first brick-and-mortar store in Auckland in 2017, we've grown both our store footprint and reputation as a reliable and responsible vape shop.</p>
+                                <p className="text-gray-600 mb-4">Founded in 2015, VAPO was established to deliver premium, high-quality e-cigarette products that differed from those available on the market at the time. Since launching our first brick-and-mortar store in Auckland in 2017, we’ve grown both our store footprint and reputation as a reliable and responsible vape shop.</p>
                                 {/* <div className="flex flex-wrap gap-2 mb-4">
                                     <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Technical SEO</span>
                                     <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Local SEO</span>
