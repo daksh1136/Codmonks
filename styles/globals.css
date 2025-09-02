@@ -404,7 +404,7 @@ footer {
 }
 
 .bg-blur {
-   background-image: url('./../public/assets/images/h-banner-1.jpg');
+   background-image: url('/assets/images/h-banner-1.jpg');
    background-repeat: no-repeat;
    background-position: center center;
    background-size: cover;
@@ -460,7 +460,7 @@ footer {
 
 /* Home Hero Banner */
 .home-hero {
-   background-image: url('./../public/assets/images/h-banner-4.jpg');
+   background-image: url('/assets/images/h-banner-4.jpg');
    background-repeat: no-repeat;
    background-position: center center;
    background-size: cover;
@@ -488,7 +488,7 @@ footer {
 
 /* About */
 .about-hero {
-   background-image: url('./../public/assets/images/h-banner-3.jpg');
+   background-image: url('/assets/images/h-banner-3.jpg');
    background-repeat: no-repeat;
    background-position: center center;
    background-size:cover;
@@ -496,7 +496,7 @@ footer {
 }
 /* Services */
 .services-hero {
-   background-image: url('./../public/assets/images/banner-3.jpg');
+   background-image: url('/assets/images/banner-3.jpg');
    background-repeat: no-repeat;
    background-position: center center;
    background-size: cover;
@@ -504,7 +504,7 @@ footer {
 }
 /* Technologies */
 .tech-hero {
-   background-image: url('./../public/assets/images/banner-7.jpeg');
+   background-image: url('/assets/images/banner-7.jpeg');
    background-repeat: no-repeat;
    background-position: center center;
    background-size: cover;
@@ -512,7 +512,7 @@ footer {
 }
 /* Portfoio */
 .portfolio-hero {
-   background-image: url('./../public/assets/images/banner-9.jpeg');
+   background-image: url('/assets/images/banner-9.jpeg');
    background-repeat: no-repeat;
    background-position: center center;
    background-size: cover;
