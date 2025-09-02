@@ -1,35 +1,91 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faCode, faImage, faPeopleArrows, faPhone, faRankingStar, faScrewdriverWrench, faThumbsUp, faTruck } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faCode, faImage, faMobile, faPalette, faPeopleArrows, faPhone, faRankingStar, faScrewdriverWrench, faThumbsUp, faTruck } from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
+
+const services = [
+  'Web Development',
+  'Mobile App Development',
+  'UI/UX Design',
+  'Cloud Solutions',
+  'E-commerce Platforms',
+  'Cybersecurity',
+  'AI & Automation',
+  'React Native Apps',
+  'Flutter Apps',
+  'Desktop Application Development',
+  'Custom CRM Solutions',
+  'ERP Development',
+  'Digital Marketing',
+  'Search Engine Optimization (SEO)',
+  'Content Marketing',
+  'Social Media Marketing',
+  'Pay-Per-Click (PPC) Advertising',
+  'PHP Development',
+  'Laravel Development',
+  'CodeIgniter Development',
+  'WordPress Development',
+  'Shopify Development',
+  'Magento Development',
+  'Progressive Web Apps (PWA)',
+  'API Development & Integration',
+  'SaaS Product Development',
+  'DevOps & CI/CD',
+  'Quality Assurance & Testing',
+  'Maintenance & Support'
+];
+
 
 const Home = () => {
   return (
     <>
       <Head>
-        <title>CodMonks Technologies</title>
-        <meta name="description" content="Welcome to the home page" />
+        <title>CodMonks Technologies | Web, Mobile, CRM & Digital Solutions</title>
+        <meta 
+          name="description" 
+          content="CodMonks Technologies offers expert Web Development, Mobile Apps (React Native, Flutter), CRM, E-commerce, SEO, and Digital Marketing solutions to grow your business." 
+        />
+        <meta name="keywords" content="Web Development, Mobile App Development, React Native, Flutter, CRM Solutions, E-commerce Development, SEO, Digital Marketing, CodMonks" />
+        <meta property="og:title" content="CodMonks Technologies | Digital Excellence" />
+        <meta property="og:description" content="We craft powerful Web, Mobile, and E-commerce solutions with SEO and digital marketing expertise." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/assets/images/og-banner.png" />
+        <meta property="og:url" content="https://www.codmonks.com" />
+        <link rel="canonical" href="https://www.codmonks.com" />
       </Head>
+
       {/* <!-- Hero Section --> */}
-      <section className="bg-hero-gredient from-blue-50 to-purple-50 py-20">
+      <section className="py-20 home-hero">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <p className="text-blue-600 font-medium mb-4">Transforming your Vision into digital excellence</p>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Craft your <span className="text-blue-600">Digital Dreams.</span><br />
-              Without the complexity.
+            <p className="text-white font-medium text-2xl mb-4">Transforming your Vision into digital excellence</p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Craft your Digital Dreams. Without the complexity.
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
               We turn your ideas into outstanding digital experiences through innovative software development and premium UI/UX design.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+              <Link href="/contact" className="button-pri px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                 Start Project
               </Link>
-              {/* <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
-                                Learn More
-                            </button> */}
             </div>
+          </div>
+        </div>
+        
+        <div className="services-marquee w-full overflow-hidden py-4 mt-20">
+          <div className="marquee-track flex">
+            {services.map((item, index) => (
+              <span key={index} className="text-white text-xl pr-8 flex items-center">
+                {item} <span className="pl-8">&#10084;</span>
+              </span>
+            ))}
+            {services.map((item, index) => (
+              <span key={index} className="text-white text-xl pr-8 flex items-center">
+                {item} <span className="pl-8">&#10084;</span>
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -43,49 +99,49 @@ const Home = () => {
           </div>
           <div className="partner-wrap flex flex-wrap justify-center items-center gap-4">
             <div className="partner">
-              <img src="/assets/images/shopify.png" alt="" />
+              <Image src="/assets/images/shopify.png" height={80} width={80} alt="Shopify Development Partner" />
             </div>
             <div className="partner">
-              <img src="/assets/images/mongodb.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/mongodb.png" alt="MongoDB Integration Partner" />
             </div>
             <div className="partner">
-              <img src="/assets/images/wordpress.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/wordpress.png" alt="WordPress Development Partner" />
             </div>
             <div className="partner">
-              <img src="/assets/images/microsoft-logo.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/microsoft-logo.png" alt="Microsoft" />
             </div>
             <div className="partner">
-              <img src="/assets/images/react.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/react.png" alt="React Development" />
             </div>
             <div className="partner">
-              <img src="/assets/images/angular.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/angular.png" alt="Angular Development" />
             </div>
             <div className="partner">
-              <img src="/assets/images/hobspot.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/hobspot.png" alt="Hubspot Integration Partner" />
             </div>
             <div className="partner">
-              <img src="/assets/images/Laravel-Logo.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/Laravel-Logo.png" alt="Laravel Development" />
             </div>
             <div className="partner">
-              <img src="/assets/images/zoho-logo.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/zoho-logo.png" alt="Zoho Integration Partner" />
             </div>
             <div className="partner">
-              <img src="/assets/images/PayPal-Logo.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/PayPal-Logo.png" alt="Paypal Integration Partner" />
             </div>
             <div className="partner">
-              <img src="/assets/images/google.png" alt="" />
+              <Image height={80} width={80} src="/assets/images/google.png" alt="Goggle Api Development" />
             </div>
           </div>
         </div>
       </section>
 
       {/* <!-- About Us Section --> */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 text-white bg-blur">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-blue-200 mb-4">WHO WE ARE</p>
+            <p className="text-gold mb-4 font-bold">WHO WE ARE</p>
             <h2 className="text-4xl font-bold mb-6">About Us</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               CodMonks is a top-tier team of passionate software engineers, designers, and strategists dedicated to transforming your ideas into powerful digital solutions that drive business growth and user engagement.
             </p>
           </div>
@@ -93,15 +149,15 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
             <div className="stats-card">
               <div className="text-3xl font-bold mb-2">250+</div>
-              <div className="text-blue-200">Projects Completed</div>
+              <div className="text-white">Projects Completed</div>
             </div>
             <div className="stats-card">
               <div className="text-3xl font-bold mb-2">250+</div>
-              <div className="text-blue-200">Happy Clients</div>
+              <div className="text-white">Happy Clients</div>
             </div>
             <div className="stats-card">
               <div className="text-3xl font-bold mb-2">5,896</div>
-              <div className="text-blue-200">Hours of Work</div>
+              <div className="text-white">Hours of Work</div>
             </div>
           </div>
         </div>
@@ -119,31 +175,31 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="service-card bg-blue-600 text-white p-8 rounded-xl">
-              <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg mb-6 flex items-center justify-center">
+            <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
                 <FontAwesomeIcon color="currentColor" icon={faCode} />
               </div>
-              <h3 className="text-xl font-bold mb-4">Web Development</h3>
-              <p className="text-blue-100 mb-6">We take your product from idea to execution — designing, developing, deploying, and improving at every stage.</p>
-              <Link href="/services" className="text-white font-medium hover:underline">LEARN MORE →</Link>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">Web Development</h3>
+              <p className="text-gray-600 mb-6">We take your product from idea to execution — designing, developing, deploying, and improving at every stage.</p>
+              <Link href="/services" className="text-blue-600 hover:underline">LEARN MORE →</Link>
             </div>
 
             <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
-                <FontAwesomeIcon color="currentColor" icon={faPhone} />
+                <FontAwesomeIcon color="currentColor" icon={faMobile} />
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">Mobile App Development</h3>
               <p className="text-gray-600 mb-6">Seamless native and cross-platform mobile applications tailored for iOS and Android ecosystems.</p>
-              <Link href="/services" className="text-blue-600 font-medium hover:underline">LEARN MORE →</Link>
+              <Link href="/services" className="text-blue-600 hover:underline">LEARN MORE →</Link>
             </div>
 
             <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-blue-100 rounded-lg mb-6 flex items-center justify-center">
-                <FontAwesomeIcon color="currentColor" icon={faImage} />
+                <FontAwesomeIcon color="currentColor" icon={faPalette} />
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">UI/UX Design</h3>
               <p className="text-gray-600 mb-6">We craft visually stunning and easy-to-use interfaces that delight your users.</p>
-              <Link href="/services" className="text-blue-600 font-medium hover:underline">LEARN MORE →</Link>
+              <Link href="/services" className="text-blue-600 hover:underline">LEARN MORE →</Link>
             </div>
 
             <div className="service-card bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
@@ -152,7 +208,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">Quality Assurance</h3>
               <p className="text-gray-600 mb-6">Comprehensive validation to ensure every feature works as intended — with zero surprises.</p>
-              <Link href="/services" className="text-blue-600 font-medium hover:underline">LEARN MORE →</Link>
+              <Link href="/services" className="text-blue-600 hover:underline">LEARN MORE →</Link>
             </div>
           </div>
         </div>
@@ -173,20 +229,20 @@ const Home = () => {
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                  <div className="w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center mr-4 mt-1 shrink-0">
                     <FontAwesomeIcon className="text-white" icon={faCheck} />
                   </div>
-                  <div>
+                  <div className='flex-grow-1'>
                     <h4 className="font-semibold text-gray-900 mb-2">Expert Development Team</h4>
                     <p className="text-gray-600">Skilled professionals with extensive experience in modern technologies.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                  <div className="w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center mr-4 mt-1 shrink-0">
                     <FontAwesomeIcon className="text-white" icon={faCheck} />
                   </div>
-                  <div>
+                  <div className='flex-grow-1'>
                     <h4 className="font-semibold text-gray-900 mb-2">24/7 Support Team</h4>
                     <p className="text-gray-600">Round-the-clock support to ensure your project runs smoothly.</p>
                   </div>
@@ -195,52 +251,52 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 gap-4">
-              <img src="/assets/images/why-us.png" alt="Team working" className="rounded-lg object-cover" />
+              <Image height={417} width={493} src="/assets/images/why-us.png" alt="Team working" className="rounded-lg object-cover" />
             </div>
           </div>
         </div>
       </section>
 
       {/* <!-- Client Success Section --> */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-blur bg-blur-style-2 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-blue-200 mb-4">OUR SUCCESS</p>
+            <p className="text-gold font-bold mb-4">OUR SUCCESS</p>
             <h2 className="text-4xl font-bold mb-6">We have helped more than 200+ clients worldwide</h2>
-            <p className="text-xl text-blue-100">Our clients trust us to deliver exceptional results that drive their business forward.</p>
+            <p className="text-xl text-white">Our clients trust us to deliver exceptional results that drive their business forward.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <FontAwesomeIcon className="text-white" icon={faTruck} />
+              <div className="w-16 h-16 bg-white bg-opacity-40 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <FontAwesomeIcon className="text-black" icon={faTruck} />
               </div>
               <h4 className="text-xl font-bold mb-2">Project Delivery</h4>
-              <p className="text-blue-100">On-time delivery with quality assurance</p>
+              <p className="text-white">On-time delivery with quality assurance</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <FontAwesomeIcon className="text-white" icon={faThumbsUp} />
+              <div className="w-16 h-16 bg-white bg-opacity-40 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <FontAwesomeIcon className="text-black" icon={faThumbsUp} />
               </div>
               <h4 className="text-xl font-bold mb-2">Client Satisfaction</h4>
-              <p className="text-blue-100">98% client satisfaction rate</p>
+              <p className="text-white">98% client satisfaction rate</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <FontAwesomeIcon className="text-white" icon={faPeopleArrows} />
+              <div className="w-16 h-16 bg-white bg-opacity-40 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <FontAwesomeIcon className="text-black" icon={faPeopleArrows} />
               </div>
               <h4 className="text-xl font-bold mb-2">Technical Excellence</h4>
-              <p className="text-blue-100">Cutting-edge technology solutions</p>
+              <p className="text-white">Cutting-edge technology solutions</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <FontAwesomeIcon className="text-white" icon={faScrewdriverWrench} />
+              <div className="w-16 h-16 bg-white bg-opacity-40 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <FontAwesomeIcon className="text-black" icon={faScrewdriverWrench} />
               </div>
               <h4 className="text-xl font-bold mb-2">Support & Maintenance</h4>
-              <p className="text-blue-100">Ongoing support and maintenance</p>
+              <p className="text-white">Ongoing support and maintenance</p>
             </div>
           </div>
         </div>
@@ -301,7 +357,7 @@ const Home = () => {
             </section> */}
 
       {/* <!-- Portfolio Section --> */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="grid grid-cols gap-4">
@@ -321,7 +377,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <!-- Team Section --> */}
       {/* <section className="py-20 bg-white">
@@ -407,13 +463,13 @@ const Home = () => {
             </section> */}
 
       {/* <!-- CTA Section --> */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Service discount up to 30% for any project</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Ready to transform your ideas into reality? Get in touch with us today and let&apos;s discuss your next project.
           </p>
-          <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+          <Link href="/contact" className="bg-white text-black px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
             Get Started Now
           </Link>
         </div>

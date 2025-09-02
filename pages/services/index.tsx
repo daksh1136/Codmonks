@@ -9,15 +9,12 @@ const Services = () => {
             </Head>
 
             {/* Hero Section */}
-            <section className="relative py-20 px-4 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
-                <div className="absolute inset-0 bg-black/10"></div>
-
+            <section className="services-hero py-40 px-4 overflow-hidden">
                 <div className="relative max-w-6xl mx-auto text-center text-white">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        Our <span className="text-blue-200">Services</span>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6 ">
+                        Our Services
                     </h1>
-                    <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto">
                         From innovative design and robust development to strategic digital marketing, we offer comprehensive solutions to transform your business and drive growth.
                     </p>
                     {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -408,7 +405,7 @@ const Services = () => {
             <section className="py-20 bg-white" id="digital-marketing">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <p className="text-purple-600 font-medium mb-4">DIGITAL MARKETING</p>
+                        <p className="text-blue-600 font-medium mb-4">DIGITAL MARKETING</p>
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">
                             Driving Growth Through Strategic Marketing
                         </h2>
@@ -576,52 +573,52 @@ const Services = () => {
             </section>
 
             {/* <!-- Process Section --> */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <section className="py-20 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 text-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-6">Our Service Process</h2>
-                        <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                        <p className="text-xl text-white max-w-3xl mx-auto">
                             We follow a proven methodology to ensure successful project delivery and client satisfaction
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-4 gap-8">
                         <div className="text-center process-step">
-                            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <span className="text-2xl font-bold">1</span>
+                            <div className="w-20 h-20 bg-white bg-opacity-80 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span className="text-2xl font-bold text-black">1</span>
                             </div>
                             <h3 className="text-xl font-bold mb-4">Discovery & Planning</h3>
-                            <p className="text-blue-100">
+                            <p className="text-white">
                                 We analyze your requirements, goals, and target audience to create a comprehensive project strategy.
                             </p>
                         </div>
 
                         <div className="text-center process-step">
-                            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <span className="text-2xl font-bold">2</span>
+                            <div className="w-20 h-20 bg-white bg-opacity-80 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span className="text-2xl font-bold text-black">2</span>
                             </div>
                             <h3 className="text-xl font-bold mb-4">Design & Development</h3>
-                            <p className="text-blue-100">
+                            <p className="text-white">
                                 Our expert team creates and develops your solution using the latest technologies and best practices.
                             </p>
                         </div>
 
                         <div className="text-center process-step">
-                            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <span className="text-2xl font-bold">3</span>
+                            <div className="w-20 h-20 bg-white bg-opacity-80 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span className="text-2xl font-bold text-black">3</span>
                             </div>
                             <h3 className="text-xl font-bold mb-4">Testing & Optimization</h3>
-                            <p className="text-blue-100">
+                            <p className="text-white">
                                 Rigorous testing and optimization ensure your solution performs flawlessly across all platforms.
                             </p>
                         </div>
 
                         <div className="text-center process-step">
-                            <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <span className="text-2xl font-bold">4</span>
+                            <div className="w-20 h-20 bg-white bg-opacity-80 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span className="text-2xl font-bold text-black">4</span>
                             </div>
                             <h3 className="text-xl font-bold mb-4">Launch & Support</h3>
-                            <p className="text-blue-100">
+                            <p className="text-white">
                                 We launch your project and provide ongoing support to ensure continued success and growth.
                             </p>
                         </div>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head'; // Added Head for better SEO
 import { blogList } from '../../data/BlogData'; 
 import React from 'react'; // Added React import for TS
-
+import { Calendar, ArrowRight } from "lucide-react";
 // ---
 // Define types for blog items for clarity in this component
 interface BlogListItem {
@@ -66,13 +66,10 @@ const Blog = ({ blogs }: BlogListProps) => { // Accept 'blogs' as a prop
             </Head>
 
             {/* Hero Section */}
-            <section className="relative py-20 px-4 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
-                <div className="absolute inset-0 bg-black/10"></div>
-
+            <section className="relative py-20 px-4 overflow-hidden bg-blur bg-blur-style-6">
                 <div className="relative max-w-6xl mx-auto text-center text-white">
-                    <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Our Blog</h1>
-                    <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                    <h1 className="text-4xl lg:text-6xl font-bold mb-6">Our Blog</h1>
+                    <p className="text-xl text-white max-w-3xl mx-auto mb-8">
                         Stay updated with the latest trends, tutorials, and insights from the world of technology and development.
                     </p>
                 </div>
@@ -81,12 +78,12 @@ const Blog = ({ blogs }: BlogListProps) => { // Accept 'blogs' as a prop
             {/* Blog Content */}
             <section className="py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Article</h2>
                     <div className="lg:grid lg:grid-cols-4 lg:gap-12">
                         {/* Main Content */}
                         <div className="lg:col-span-3">
                             {/* Featured Post */}
                             <div className="mb-12">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Article</h2>
                                 {featuredBlog && ( // Conditional render if featuredBlog exists
                                     <Link href={`/blogs/${featuredBlog.id}`}>
                                         <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -109,7 +106,7 @@ const Blog = ({ blogs }: BlogListProps) => { // Accept 'blogs' as a prop
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center space-x-3">
                                                         <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
-                                                            <span className="text-white font-semibold text-sm">CM</span>
+                                                            <span className="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">CM</span>
                                                         </div>
                                                         <div>
                                                             <p className="font-semibold text-gray-900">{featuredBlog.author || 'CodMonks Team'}</p>
@@ -118,7 +115,7 @@ const Blog = ({ blogs }: BlogListProps) => { // Accept 'blogs' as a prop
                                                     </div>
                                                     <div className="inline-flex items-center text-primary hover:text-secondary font-semibold">
                                                         Read More
-                                                        <i data-lucide="arrow-right" className="ml-2 w-4 h-4"></i>
+                                                        <ArrowRight className="ml-2 w-4 h-4" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -150,7 +147,7 @@ const Blog = ({ blogs }: BlogListProps) => { // Accept 'blogs' as a prop
                                                 </div>
                                                 <div className="md:w-2/3 p-6">
                                                     <div className="flex items-center space-x-2 text-sm text-gray-500 mb-3">
-                                                        <i data-lucide="calendar" className="w-4 h-4"></i>
+                                                        <Calendar className="w-4 h-4 text-gray-700" />
                                                         <span>{blog.date}</span>
                                                         <span>•</span>
                                                         <span>{blog.readTime || '5 min read'}</span>
@@ -171,8 +168,8 @@ const Blog = ({ blogs }: BlogListProps) => { // Accept 'blogs' as a prop
                                                                 </span>
                                                             ))}
                                                         </div>
-                                                        <Link href={`/blogs/${blog.id}`} className="text-primary hover:text-secondary font-semibold">
-                                                            Read More
+                                                        <Link href={`/blogs/${blog.id}`} className="inline-flex items-center text-primary hover:text-secondary font-semibold">
+                                                            Read More <ArrowRight className="ml-2 w-4 h-4" />
                                                         </Link>
                                                     </div>
                                                 </div>

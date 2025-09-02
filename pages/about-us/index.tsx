@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 const AboutUs = () => {
     return (
@@ -8,15 +9,12 @@ const AboutUs = () => {
                 <meta name="description" content="Welcome to the home page" />
             </Head>
             {/* Hero Section */}
-            <section className="relative py-20 px-4 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
-                <div className="absolute inset-0 bg-black/10"></div>
-
-                <div className="relative max-w-6xl mx-auto text-center text-white">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        About <span className="text-blue-200">CodMonks</span>
+            <section className="about-hero relative py-40 px-4 overflow-hidden">
+                <div className="max-w-6xl mx-auto text-center text-white">
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                        About CodMonks
                     </h1>
-                    <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto">
                         We are a passionate team of digital craftsmen, transforming innovative ideas into powerful software solutions that drive business growth and create exceptional user experiences.
                     </p>
                 </div>
@@ -54,8 +52,8 @@ const AboutUs = () => {
                         </div>
 
                         <div className="relative">
-                            <img src="./assets/images/about-us.jpg" alt="Our Story" className="rounded-lg shadow-lg" />
-                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <Image height={428} width={800} src="/assets/images/about-us.jpg" alt="Our Story" className="rounded-lg shadow-lg" />
+                            <div className="px-3 absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600 rounded-lg flex items-center justify-center">
                                 <div className="text-center text-white">
                                     <div className="text-2xl font-bold">5+</div>
                                     <div className="text-sm">Years Experience</div>
@@ -77,31 +75,31 @@ const AboutUs = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12">
-                        <div className="bg-white p-8 rounded-xl shadow-lg">
-                            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="bg-blur bg-blur-style-3 p-8 rounded-xl shadow-lg">
+                            <div className="w-16 h-16  bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-6">
+                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-                            <p className="text-gray-600 mb-6">
+                            <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
+                            <p className="text-white mb-6">
                                 To empower businesses and entrepreneurs by transforming their digital dreams into reality through innovative software development, exceptional design, and strategic technology consulting.
                             </p>
-                            <ul className="space-y-3 text-gray-600">
+                            <ul className="space-y-3 text-white">
                                 <li className="flex items-start">
-                                    <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg className="w-5 h-5 text-white mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     Deliver cutting-edge digital solutions
                                 </li>
                                 <li className="flex items-start">
-                                    <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg className="w-5 h-5 text-white mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     Foster long-term partnerships
                                 </li>
                                 <li className="flex items-start">
-                                    <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg className="w-5 h-5 text-white mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                     </svg>
                                     Drive business growth through technology
@@ -109,7 +107,7 @@ const AboutUs = () => {
                             </ul>
                         </div>
 
-                        <div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white p-8 rounded-xl shadow-lg">
+                        <div className="bg-blur bg-blur-style-7 text-white p-8 rounded-xl shadow-lg">
                             <div className="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-6">
                                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -325,11 +323,11 @@ const AboutUs = () => {
             </section> */}
 
             {/* <!-- Company Stats Section --> */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <section className="py-20 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 text-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-6">Our Impact in Numbers</h2>
-                        <p className="text-xl text-blue-100">
+                        <p className="text-xl text-white">
                             These numbers represent the trust our clients place in us and the results we deliver
                         </p>
                     </div>
@@ -337,15 +335,15 @@ const AboutUs = () => {
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                         <div className="text-center stats-card">
                             <div className="text-5xl font-bold mb-4">250+</div>
-                            <div className="text-blue-200 text-lg">Projects Completed</div>
+                            <div className="text-white text-lg">Projects Completed</div>
                         </div>
                         <div className="text-center stats-card">
                             <div className="text-5xl font-bold mb-4">250+</div>
-                            <div className="text-blue-200 text-lg">Happy Clients</div>
+                            <div className="text-white text-lg">Happy Clients</div>
                         </div>
                         <div className="text-center stats-card">
                             <div className="text-5xl font-bold mb-4">5,896</div>
-                            <div className="text-blue-200 text-lg">Hours of Work</div>
+                            <div className="text-white text-lg">Hours of Work</div>
                         </div>
                     </div>
                 </div>

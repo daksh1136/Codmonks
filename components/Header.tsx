@@ -1,6 +1,9 @@
 // src/components/Header.tsx
 import Link from 'next/link';
 import ActiveLink from './ActiveLink';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClose } from '@fortawesome/free-solid-svg-icons';
 
 const navItems = [
     { path: '/', label: 'Home' },
@@ -14,6 +17,11 @@ const navItems = [
 
 const Header = () => {
 
+    const [isMobileNav, setIsMobileNav] = useState(false);
+
+    const toggleNav = () => {
+        setIsMobileNav(!isMobileNav);
+    }
 
     return (
         <>
@@ -23,31 +31,34 @@ const Header = () => {
                 <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
                     <Link href="/" className="flex items-center">
                         <picture>
-                            <img src="assets/images/logo.webp" />
+                            <img src="./../assets/images/logo-1-tp.png" className='max-w-[194px]' />
                         </picture>
                     </Link>
 
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className={isMobileNav ? 'active lg:flex items-center space-x-8 top-nav' : 'lg:flex items-center space-x-8 top-nav'}>
                         <nav className="flex gap-6">
                             {navItems.map(({ path, label }) => (
                                 <ActiveLink
                                     key={path} // Keep key if this is part of a mapped list
                                     href={path}
-                                    className="transition-colors text-gray-700 hover:text-blue-600" // Base/inactive classes
-                                    activeClassName="text-blue-600 font-semibold" // Classes applied when active
+                                    className="transition-colors text-gray-700 hover:text-golden" // Base/inactive classes
+                                    activeClassName="text-blue-600 font-semibold active" // Classes applied when active
                                 >
                                     {label}
                                 </ActiveLink>
                             ))}
                         </nav>
+                        <button className="lg:hidden nav-close" onClick={toggleNav}>
+                            <FontAwesomeIcon color="currentColor" icon={faClose} />
+                        </button>
                     </div>
 
-                    <Link href="/contact" className="bg-custom-gradient text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    <Link href="/contact" className="hidden lg:flex button-pri px-8 py-3 rounded-lg transition-colors font-medium">
                         Get Quote
                     </Link>
 
                     {/* <!-- Mobile menu button --> */}
-                    <button className="md:hidden">
+                    <button className="lg:hidden" onClick={toggleNav}>
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>

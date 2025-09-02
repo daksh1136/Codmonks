@@ -103,17 +103,14 @@ const Technologies = () => {
                 <meta name="description" content="Welcome to the home page" />
             </Head>
             {/* Hero Section */}
-            <section className="relative py-20 px-4 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
-                <div className="absolute inset-0 bg-black/10"></div>
-
+            <section className="relative py-40 px-4 overflow-hidden tech-hero">
                 <div className="relative max-w-6xl mx-auto text-center text-white">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        Cutting-Edge <span className="text-blue-200">Technologies</span>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                        Cutting-Edge Technologies
                         <br />
                         Powering Innovation
                     </h1>
-                    <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto">
                         We leverage the latest technologies and frameworks to build scalable,
                         secure, and high-performance digital solutions that drive business growth.
                     </p>
@@ -126,7 +123,7 @@ const Technologies = () => {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         {stats.map((stat, index) => (
                             <div key={index} className="space-y-2">
-                                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                <div className="text-4xl md:text-5xl font-bold">
                                     {stat.number}
                                 </div>
                                 <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -187,22 +184,22 @@ const Technologies = () => {
 
             {/* CTA Section */}
             <section className="py-20 px-4 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 text-white"></div>
                 <div className="absolute inset-0 bg-black/10"></div>
 
                 <div className="relative max-w-4xl mx-auto text-center text-white">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Ready to Build Something Amazing?
                     </h2>
-                    <p className="text-xl mb-8 text-blue-100 leading-relaxed">
+                    <p className="text-xl mb-8 text-white leading-relaxed">
                         Let’s discuss how our technology expertise can transform your ideas into reality.
                         Our team is ready to tackle your next big project.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/contact" className="bg-custom-gradient text-white hover:bg-blue-50 font-semibold rounded-lg px-8 py-3">
+                        <Link href="/contact" className="bg-white text-black px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
                             Start Your Project
                         </Link>
-                        <Link href="/portfolio" className="bg-white border-white rounded-lg text-purple-600 hover:bg-white font-semibold px-8 py-3">
+                        <Link href="/portfolio" className="bg-white text-black px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
                             View Our Work
                         </Link>
                     </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PageLoader from "./PageLoader/PageLoader";
 import React from 'react'; // <--- ADD THIS LINE: Import React if you haven't already
+import Link from "next/link";
                            //      This is necessary for React.FormEvent
 
 export default function ContactForm() {
@@ -63,7 +64,7 @@ export default function ContactForm() {
                             required
                         />
                     </div>
-                    <div>
+                    <div className="col-span-2 md:col-span-1">
                         <label htmlFor="emailAddress" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                         <input
                             type="email"
@@ -74,7 +75,7 @@ export default function ContactForm() {
                             className="w-full border border-gray-300 p-3 rounded-xl focus:ring-indigo-500 focus:border-indigo-500"
                         />
                     </div>
-                    <div>
+                    <div className="col-span-2 md:col-span-1">
                         <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
                         <input
                             type="tel"
@@ -96,12 +97,9 @@ export default function ContactForm() {
                         ></textarea>
                     </div>
                     <div className="col-span-2 text-right">
-                        <button
-                            type="submit"
-                            className="bg-gradient-to-r from-indigo-600 to-purple-500 text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition"
-                        >
-                            Send Message
-                        </button>
+                      <button type="submit" className="button-pri px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Send Message
+                      </button>
                     </div>
                 </form>
             </div>
