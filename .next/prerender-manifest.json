@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/blogs/future-web-dev":{},"/blogs/responsive-css":{},"/blogs/mobile-dev":{},"/blogs/seo-best-practices":{},"/blogs/react-hooks-guide":{},"/blogs/db-optimization":{},"/blogs/api-security":{}},"dynamicRoutes":{"/blogs/[id]":{"fallback":false}},"notFoundRoutes":[],"preview":{"previewModeId":"933b1832a997b14f23ca8a35c802653b","previewModeSigningKey":"b314c2e35084b42041b490ab778fde891802a6b920614b0ef32f4c639483885e","previewModeEncryptionKey":"0ddeacd7bdd01909b6c609119f05dd93f441fa9a0c0df2bcb4009a36652e6071"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "68d507df2f4a44d1e9f4c3ecbc21d018",
+    "previewModeSigningKey": "a34fce357bfc8673267364757ffcd0a712e6dd0527c1360b3957377db705f8d8",
+    "previewModeEncryptionKey": "93f59a8d83a2dd81a9c815174278cf2def3eec24f2eca086995038f689922e4f"
+  }
+}

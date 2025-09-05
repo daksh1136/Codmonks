@@ -6,6 +6,7 @@ interface ActiveLinkProps {
   href: string; // The link destination
   activeClassName?: string; // Optional class for active state
   className?: string; // Optional default/inactive class
+  onClick?: () => void;
   // You can add other standard <a> tag props or Link component props here if needed,
   // or use React.ComponentProps for a more comprehensive type.
 }

@@ -169,7 +169,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <p className="text-blue-600 mb-4">WHAT WE DO</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Transforming Ideas into<br />
+              Transforming Ideas into<br className='hidden md:block' />
               Intelligent Software.
             </h2>
           </div>

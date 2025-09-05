@@ -41,6 +41,7 @@ const Header = () => {
                                 <ActiveLink
                                     key={path} // Keep key if this is part of a mapped list
                                     href={path}
+                                    onClick={() => setIsMobileNav(false)}
                                     className="transition-colors text-gray-700 hover:text-golden" // Base/inactive classes
                                     activeClassName="text-blue-600 font-semibold active" // Classes applied when active
                                 >
