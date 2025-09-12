@@ -1,7 +1,6 @@
 import { useState } from "react";
 import PageLoader from "./PageLoader/PageLoader";
 import React from 'react'; // <--- ADD THIS LINE: Import React if you haven't already
-import Link from "next/link";
                            //      This is necessary for React.FormEvent
 
 export default function ContactForm() {

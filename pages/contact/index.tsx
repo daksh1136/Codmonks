@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import ContactForms from "@/components/ContactFormNew";
 import Head from "next/head";
 import React from "react";
 
@@ -15,7 +16,8 @@ const Contact: React.FC = () => {
                     <p className="text-lg">Ready to transform your vision into reality? Let’s talk!</p>
                 </div>
             </section>
-            <ContactForm />
+            {/* <ContactForm /> */}
+            <ContactForms />
         </>
     );
 };
