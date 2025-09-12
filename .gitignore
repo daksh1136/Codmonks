@@ -6,6 +6,16 @@
 /out-tsc
 /bazel-out
 
+# Ignore Next.js build output
+.next/
+
+# Ignore logs
+yarn-debug.log*
+
+# Ignore environment variable files
+.env.local
+.env.*.local
+
 # Node
 /node_modules
 npm-debug.log
