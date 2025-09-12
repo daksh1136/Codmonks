@@ -10,7 +10,7 @@ export default function ContactForms() {
   const [status, setStatus] = useState("");
   const [ isLoading, setIsLoading ] = useState(false);
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     setIsLoading(true);
     setStatus("Sending...");
     e.preventDefault();
