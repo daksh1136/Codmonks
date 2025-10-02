@@ -53,11 +53,18 @@ const Home = () => {
         <meta property="og:image" content="/assets/images/og-banner.png" />
         <meta property="og:url" content="https://www.codmonks.com" />
         <link rel="canonical" href="https://www.codmonks.com" />
-        <link rel="preload" as="image" href="/assets/images/hero.jpg" />
       </Head>
 
       {/* <!-- Hero Section --> */}
       <section className="py-20 home-hero">
+        <Image
+          src="/assets/images/h-banner-4.jpg"
+          alt="Hero background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover -z-10 image"
+        />
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <p className="text-white font-medium text-2xl mb-4">Transforming your Vision into digital excellence</p>
