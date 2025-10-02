@@ -12,6 +12,14 @@ const Portfolio = () => {
         <div className="min-h-screen bg-background">
             {/* <!-- Hero Section --> */}
             <section className="relative py-40 px-4 overflow-hidden portfolio-hero">
+                <Image
+                    src="/assets/images/banner-9.jpeg"
+                    alt="Hero background"
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover -z-10 image"
+                />
                 <div className="relative max-w-6xl mx-auto text-center text-white">
                     <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                         Our Portfolio

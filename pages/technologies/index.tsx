@@ -1,6 +1,7 @@
 
 import { Code, Database, Cloud, Globe, Server } from "lucide-react";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 // import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 // import { Badge } from "@/components/ui/badge";
@@ -104,6 +105,14 @@ const Technologies = () => {
             </Head>
             {/* Hero Section */}
             <section className="relative py-40 px-4 overflow-hidden tech-hero">
+                <Image
+                    src="/assets/images/banner-7.jpeg"
+                    alt="Hero background"
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover -z-10 image"
+                />
                 <div className="relative max-w-6xl mx-auto text-center text-white">
                     <h1 className="text-5xl md:text-6xl font-bold mb-6">
                         Cutting-Edge Technologies

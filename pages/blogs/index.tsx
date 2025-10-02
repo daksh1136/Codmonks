@@ -4,6 +4,7 @@ import Head from 'next/head'; // Added Head for better SEO
 import { blogList } from '../../data/BlogData'; 
 import React from 'react'; // Added React import for TS
 import { Calendar, ArrowRight } from "lucide-react";
+import Image from 'next/image';
 // ---
 // Define types for blog items for clarity in this component
 interface BlogListItem {

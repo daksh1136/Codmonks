@@ -10,6 +10,14 @@ const AboutUs = () => {
             </Head>
             {/* Hero Section */}
             <section className="about-hero relative py-40 px-4 overflow-hidden">
+                <Image
+                    src="/assets/images/h-banner-3.jpg"
+                    alt="Hero background"
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover -z-10 image"
+                />
                 <div className="max-w-6xl mx-auto text-center text-white">
                     <h1 className="text-5xl md:text-6xl font-bold mb-6">
                         About CodMonks

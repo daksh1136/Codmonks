@@ -458,7 +458,7 @@ footer {
     z-index: 1;
 }
 
-.home-hero {
+.home-hero, .about-hero, .services-hero, .tech-hero, .portfolio-hero {
     position: relative;
     .image {
         position: absolute;
@@ -490,39 +490,6 @@ footer {
 .home-hero *, .about-hero *, .services-hero *, .tech-hero *, .portfolio-hero * {
     position: relative;
     z-index: 1;
-}
-
-/* About */
-.about-hero {
-   background-image: url('/assets/images/h-banner-3.jpg');
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size:cover;
-   position: relative;
-}
-/* Services */
-.services-hero {
-   background-image: url('/assets/images/banner-3.jpg');
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
-   position: relative;
-}
-/* Technologies */
-.tech-hero {
-   background-image: url('/assets/images/banner-7.jpeg');
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
-   position: relative;
-}
-/* Portfoio */
-.portfolio-hero {
-   background-image: url('/assets/images/banner-9.jpeg');
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
-   position: relative;
 }
 
 /* Button */
