@@ -1,5 +1,6 @@
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import Link from "next/link";
 
 const servicesLinks = [
@@ -30,7 +31,13 @@ const Footer = () => {
               <h3 className="text-2xl font-bold mb-6">
                 <Link href="/" className="flex items-center">
                     <picture>
-                        <img src="./../assets/images/logo-1-tp.png" className='max-w-[194px]' />
+                        <Image 
+                          src="/assets/images/logo-1-tp.png" 
+                          alt="Company Logo" 
+                          width={194} 
+                          height={49}
+                          className="max-w-[194px] h-auto"
+                        />
                     </picture>
                 </Link>
               </h3>

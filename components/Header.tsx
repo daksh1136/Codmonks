@@ -4,6 +4,7 @@ import ActiveLink from './ActiveLink';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 
 const navItems = [
     { path: '/', label: 'Home' },
@@ -31,7 +32,13 @@ const Header = () => {
                 <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
                     <Link href="/" className="flex items-center">
                         <picture>
-                            <img src="./../assets/images/logo-1-tp.png" className='max-w-[194px]' />
+                            <Image 
+                                src="/assets/images/logo-1-tp.png" 
+                                alt="Company Logo" 
+                                width={194} 
+                                height={49}
+                                className="max-w-[194px] h-auto"
+                            />
                         </picture>
                     </Link>
 
