@@ -53,6 +53,7 @@ const Home = () => {
         <meta property="og:image" content="/assets/images/og-banner.png" />
         <meta property="og:url" content="https://www.codmonks.com" />
         <link rel="canonical" href="https://www.codmonks.com" />
+        <link rel="preload" as="image" href="/assets/images/hero.jpg" />
       </Head>
 
       {/* <!-- Hero Section --> */}
