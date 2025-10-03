@@ -213,7 +213,7 @@ h6 {
         font-size: 18px;
     }
     .top-nav nav a.active {
-        color: #FF9A2E;
+        color: #E66E00;
     }
     .nav-close {
         color: white;
@@ -344,11 +344,11 @@ button:focus {
 }
 
 .text-gold {
-    color: #FF9A2E;
+    color: #E66E00;
 }
 
 .text-blue-600 {
-    color: #FF9A2E;
+    color: #E66E00;
     font-weight: bold;
 }
 
@@ -494,7 +494,7 @@ footer {
 
 /* Button */
 .button-pri {
-    background: linear-gradient(to right, #FF9A2E, #FFCD00);
+    background: linear-gradient(to right, #E66E00, #FFCD00);
     color: #000000;
 }
 
