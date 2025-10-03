@@ -241,7 +241,7 @@ const Home = () => {
                     <FontAwesomeIcon className="text-white" icon={faCheck} />
                   </div>
                   <div className='flex-grow-1'>
-                    <h4 className="font-semibold text-gray-900 mb-2">Expert Development Team</h4>
+                    <h3 className="font-semibold text-gray-900 mb-2">Expert Development Team</h3>
                     <p className="text-gray-600">Skilled professionals with extensive experience in modern technologies.</p>
                   </div>
                 </div>
@@ -251,7 +251,7 @@ const Home = () => {
                     <FontAwesomeIcon className="text-white" icon={faCheck} />
                   </div>
                   <div className='flex-grow-1'>
-                    <h4 className="font-semibold text-gray-900 mb-2">24/7 Support Team</h4>
+                    <h3 className="font-semibold text-gray-900 mb-2">24/7 Support Team</h3>
                     <p className="text-gray-600">Round-the-clock support to ensure your project runs smoothly.</p>
                   </div>
                 </div>
@@ -279,7 +279,7 @@ const Home = () => {
               <div className="w-16 h-16 bg-white bg-opacity-40 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <FontAwesomeIcon className="text-black" icon={faTruck} />
               </div>
-              <h4 className="text-xl font-bold mb-2">Project Delivery</h4>
+              <h3 className="text-xl font-bold mb-2">Project Delivery</h3>
               <p className="text-white">On-time delivery with quality assurance</p>
             </div>
 
@@ -287,7 +287,7 @@ const Home = () => {
               <div className="w-16 h-16 bg-white bg-opacity-40 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <FontAwesomeIcon className="text-black" icon={faThumbsUp} />
               </div>
-              <h4 className="text-xl font-bold mb-2">Client Satisfaction</h4>
+              <h3 className="text-xl font-bold mb-2">Client Satisfaction</h3>
               <p className="text-white">98% client satisfaction rate</p>
             </div>
 
@@ -295,7 +295,7 @@ const Home = () => {
               <div className="w-16 h-16 bg-white bg-opacity-40 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <FontAwesomeIcon className="text-black" icon={faPeopleArrows} />
               </div>
-              <h4 className="text-xl font-bold mb-2">Technical Excellence</h4>
+              <h3 className="text-xl font-bold mb-2">Technical Excellence</h3>
               <p className="text-white">Cutting-edge technology solutions</p>
             </div>
 
@@ -303,7 +303,7 @@ const Home = () => {
               <div className="w-16 h-16 bg-white bg-opacity-40 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <FontAwesomeIcon className="text-black" icon={faScrewdriverWrench} />
               </div>
-              <h4 className="text-xl font-bold mb-2">Support & Maintenance</h4>
+              <h3 className="text-xl font-bold mb-2">Support & Maintenance</h3>
               <p className="text-white">Ongoing support and maintenance</p>
             </div>
           </div>
