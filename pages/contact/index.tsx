@@ -9,6 +9,7 @@ const Contact: React.FC = () => {
             <Head>
                 <title>Contact Us | CodMonks</title>
                 <meta name="description" content="Welcome to the home page" />
+                <link rel="canonical" href="https://codmonks.com/contact" />
             </Head>
             <section className="bg-blur bg-blur-style-9 text-white py-20">
                 <div className="max-w-3xl mx-auto text-center">

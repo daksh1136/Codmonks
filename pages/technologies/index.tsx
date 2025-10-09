@@ -102,6 +102,7 @@ const Technologies = () => {
             <Head>
                 <title>Technologies | CodMonks</title>
                 <meta name="description" content="Welcome to the home page" />
+                <link rel="canonical" href="https://codmonks.com/technologies" />
             </Head>
             {/* Hero Section */}
             <section className="relative py-40 px-4 overflow-hidden tech-hero">

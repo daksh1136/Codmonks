@@ -8,6 +8,7 @@ const Portfolio = () => {
         <Head>
             <title>Portfolio | CodMonks</title>
             <meta name="description" content="Welcome to the home page" />
+            <link rel="canonical" href="https://codmonks.com/portfolio" />
         </Head>
         <div className="min-h-screen bg-background">
             {/* <!-- Hero Section --> */}

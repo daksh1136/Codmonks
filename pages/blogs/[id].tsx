@@ -78,6 +78,7 @@ const BlogDetail = ({ blog }: BlogDetailProps) => {
       <Head>
         <title>{blog.title} | My Blog</title>
         <meta name="description" content={blog.description} />
+        <link rel="canonical" href={`https://codmonks.com/blogs/${blog.id}`} />
       </Head>
 
       <div className="max-w-4xl mx-auto px-4 py-12">

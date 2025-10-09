@@ -7,6 +7,7 @@ const Services = () => {
             <Head>
                 <title>Services | CodMonks</title>
                 <meta name="description" content="Welcome to the home page" />
+                <link rel="canonical" href="https://codmonks.com/services" />
             </Head>
 
             {/* Hero Section */}

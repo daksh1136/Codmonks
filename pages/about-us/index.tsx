@@ -7,6 +7,7 @@ const AboutUs = () => {
             <Head>
                 <title>About Us | CodMonks</title>
                 <meta name="description" content="Welcome to the home page" />
+                <link rel="canonical" href="https://codmonks.com/about-us" />
             </Head>
             {/* Hero Section */}
             <section className="about-hero relative py-40 px-4 overflow-hidden">

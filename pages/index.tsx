@@ -3,6 +3,7 @@ import { faCheck, faCode, faImage, faMobile, faPalette, faPeopleArrows, faPhone,
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
+import Canonical from '@/components/Canonical';
 
 const services = [
   'Web Development',
@@ -52,7 +53,7 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/assets/images/og-banner.png" />
         <meta property="og:url" content="https://www.codmonks.com" />
-        <link rel="canonical" href="https://www.codmonks.com" />
+        <link rel="canonical" href="https://codmonks.com/" />
       </Head>
 
       {/* <!-- Hero Section --> */}
