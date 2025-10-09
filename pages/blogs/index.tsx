@@ -5,7 +5,6 @@ import { blogList } from '../../data/BlogData';
 import React from 'react'; // Added React import for TS
 import { Calendar, ArrowRight } from "lucide-react";
 import Image from 'next/image';
-import Canonical from '@/components/Canonical';
 // ---
 // Define types for blog items for clarity in this component
 interface BlogListItem {

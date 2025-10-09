@@ -3,7 +3,6 @@ import { faCheck, faCode, faImage, faMobile, faPalette, faPeopleArrows, faPhone,
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
-import Canonical from '@/components/Canonical';
 
 const services = [
   'Web Development',
