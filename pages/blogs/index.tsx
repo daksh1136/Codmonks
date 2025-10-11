@@ -72,7 +72,7 @@ const Blog = ({ blogs }: BlogListProps) => { // Accept 'blogs' as a prop
                 <div className="relative max-w-6xl mx-auto text-center text-white">
                     <h1 className="text-4xl lg:text-6xl font-bold mb-6">Our Blog</h1>
                     <p className="text-xl text-white max-w-3xl mx-auto mb-8">
-                        Stay updated with the latest trends, tutorials, and insights from the world of technology and development.
+                        <strong>Stay updated with the latest trends, tutorials, and insights from the world of technology and development.</strong>
                     </p>
                 </div>
             </section>            

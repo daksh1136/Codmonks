@@ -24,7 +24,7 @@ const AboutUs = () => {
                         About CodMonks
                     </h1>
                     <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto">
-                        We are a passionate team of digital craftsmen, transforming innovative ideas into powerful software solutions that drive business growth and create exceptional user experiences.
+                        <strong>We are a passionate team of digital craftsmen, transforming innovative ideas into powerful software solutions that drive business growth and create exceptional user experiences.</strong>
                     </p>
                 </div>
             </section>

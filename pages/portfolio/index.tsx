@@ -26,8 +26,7 @@ const Portfolio = () => {
                         Our Portfolio
                     </h1>
                     <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto leading-relaxed">
-                        Discover our successful projects across web development, mobile apps,
-                        content management, SEO optimization, and CRM solutions.
+                        <strong>Inside Codmonks Technologies: A portfolio shaped by vision and success.</strong>
                     </p>
                 </div>
             </section>
@@ -37,23 +36,17 @@ const Portfolio = () => {
                 <div className="max-w-6xl mx-auto">
 
                     <div className="py-12 text-gray-800">
-                        <h2 className="text-3xl font-bold mb-4">Founder’s Story</h2>
+                        <h2 className="text-3xl font-bold mb-4 text-center">We design, create and develop innovative<br className='hidden md:block' /> solutions adapted to your needs.</h2>
                         <p className="mb-4 text-lg leading-relaxed">
-                            I’m a passionate and experienced Full Stack Developer with over <strong>11+ years of professional experience</strong> in designing, developing, and delivering scalable web and mobile applications.
-                            I hold a Master’s degree in Computer Applications from <strong>Sikkim Manipal University</strong> and have contributed to a wide range of successful software projects across industries including finance, healthcare, and e-commerce.
+                            <strong>CodMonks Technologies</strong> is a full-stack development company specializing in creating scalable, high-performance web and mobile solutions. With over a decade of experience, we’ve delivered successful digital products across industries such as <strong>finance, healthcare, education, and e-commerce</strong>.
                         </p>
 
                         <p className="mb-4 text-lg leading-relaxed">
-                            I specialize in <strong>modern JavaScript frameworks</strong> like React, Angular, and Node.js, and am equally comfortable building backend APIs, integrating third-party services, or working with cloud platforms.
-                            I’m also experienced in tools like TypeScript, Express, MongoDB, PostgreSQL, and Firebase, and follow best practices for code quality, performance, and security.
+                            Our team excels in <strong>modern JavaScript frameworks like React, Angular, and Node.js</strong>, as well as eCommerce platforms including <strong>Shopify, WordPress, Webflow, and Adobe Experience Manager (AEM)</strong>. We’re experts in <strong>API integrations, cloud deployment, and performance optimization</strong>, ensuring every project is secure, fast, and reliable.
                         </p>
 
                         <p className="mb-4 text-lg leading-relaxed">
-                            Throughout my career, I have led and collaborated on multiple projects—from dynamic web portals to enterprise applications—focusing on clean architecture, responsive design, and seamless user experiences.
-                        </p>
-
-                        <p className="mb-4 text-lg leading-relaxed">
-                            I’m always eager to take on new challenges and learn emerging technologies to create solutions that make a meaningful impact. Whether working independently or as part of a team, I bring dedication, adaptability, and a product-focused mindset.
+                            At CodMonks, we combine <strong>technical excellence with design thinking</strong> to craft seamless user experiences and business-driven results for startups and enterprises alike.
                         </p>
                     </div>
 

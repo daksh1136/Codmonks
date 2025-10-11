@@ -25,7 +25,7 @@ const Services = () => {
                         Our Services
                     </h1>
                     <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto">
-                        From innovative design and robust development to strategic digital marketing, we offer comprehensive solutions to transform your business and drive growth.
+                        <strong>From innovative design and robust development to strategic digital marketing, we offer comprehensive solutions to transform your business and drive growth.</strong>
                     </p>
                     {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <button className="bg-custom-gradient text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">

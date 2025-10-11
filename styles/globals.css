@@ -34,7 +34,7 @@ h1 {
     line-height: 1.25 !important;
     font-size: 3.75rem;     /* or your preferred size */
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 1.2 !important;
     margin: 0.5em 0;
 }
 

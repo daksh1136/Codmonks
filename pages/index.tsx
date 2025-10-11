@@ -72,7 +72,7 @@ const Home = () => {
               Craft your Digital Dreams. Without the complexity.
             </h1>
             <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-              We turn your ideas into outstanding digital experiences through innovative software development and premium UI/UX design.
+              <strong>We turn your ideas into outstanding digital experiences through innovative software development and premium UI/UX design.</strong>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="button-pri px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">

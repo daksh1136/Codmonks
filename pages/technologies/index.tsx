@@ -121,8 +121,8 @@ const Technologies = () => {
                         Powering Innovation
                     </h1>
                     <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto">
-                        We leverage the latest technologies and frameworks to build scalable,
-                        secure, and high-performance digital solutions that drive business growth.
+                        <strong>We leverage the latest technologies and frameworks to build scalable,
+                        secure, and high-performance digital solutions that drive business growth.</strong>
                     </p>
                 </div>
             </section>
