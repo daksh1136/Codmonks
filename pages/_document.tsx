@@ -1,4 +1,3 @@
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -20,7 +19,6 @@ export default function Document() {
       <body className="antialiased">
         <Main />
         <NextScript />
-        <SpeedInsights />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
