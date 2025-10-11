@@ -41,17 +41,13 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>CodMonks Technologies | Web, Mobile, CRM & Digital Solutions</title>
-        <meta 
-          name="description" 
-          content="CodMonks Technologies offers expert Web Development, Mobile Apps (React Native, Flutter), CRM, E-commerce, SEO, and Digital Marketing solutions to grow your business." 
-        />
-        <meta name="keywords" content="Web Development, Mobile App Development, React Native, Flutter, CRM Solutions, E-commerce Development, SEO, Digital Marketing, CodMonks" />
-        <meta property="og:title" content="CodMonks Technologies | Digital Excellence" />
-        <meta property="og:description" content="We craft powerful Web, Mobile, and E-commerce solutions with SEO and digital marketing expertise." />
+        <title>CodMonks Technologies — Web, Mobile, CRM Solutions</title>
+        <meta name="description" content="Web, mobile, CRM, and e‑commerce development with SEO and digital marketing to grow businesses." />
+        <meta property="og:title" content="CodMonks Technologies — Web, Mobile, CRM Solutions" />
+        <meta property="og:description" content="Web, mobile, CRM, and e‑commerce development with SEO and digital marketing." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/assets/images/og-banner.png" />
-        <meta property="og:url" content="https://www.codmonks.com" />
+        <meta property="og:image" content="https://codmonks.com/assets/images/og-banner.jpg" />
+        <meta property="og:url" content="https://codmonks.com/" />
         <link rel="canonical" href="https://codmonks.com/" />
       </Head>
 
