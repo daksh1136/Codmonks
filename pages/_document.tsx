@@ -24,8 +24,8 @@ export default function Document() {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "CodMonks Technologies",
-            "url": "https://www.codmonks.com",
-            "logo": "https://www.codmonks.com/assets/images/logo-1-tp.png",
+            "url": "https://codmonks.com",
+            "logo": "https://codmonks.com/assets/images/logo-1-tp.png",
             "sameAs": [
               "https://www.facebook.com/codmonks",
               "https://www.linkedin.com/company/codmonks",
