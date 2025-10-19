@@ -12,7 +12,7 @@ const Portfolio = () => {
         </Head>
         <div className="min-h-screen bg-background">
             {/* <!-- Hero Section --> */}
-            <section className="relative py-40 px-4 overflow-hidden portfolio-hero">
+            <section className="relative py-40 px-4 min-h-[55vh] sm:min-h-[60vh] overflow-hidden portfolio-hero">
                 <Image
                     src="/assets/images/banner-9.jpeg"
                     alt="Hero background"
