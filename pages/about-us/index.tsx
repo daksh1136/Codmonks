@@ -62,7 +62,7 @@ const AboutUs = () => {
 
                         <div className="relative">
                             <Image height={428} width={800} src="/assets/images/about-us.jpg" alt="Our Story" className="rounded-lg shadow-lg" />
-                            <div className="px-3 absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <div className="px-3 absolute -bottom-6 w-32 h-32 bg-blue-600 rounded-lg flex items-center justify-center">
                                 <div className="text-center text-white">
                                     <div className="text-2xl font-bold">5+</div>
                                     <div className="text-sm">Years Experience</div>

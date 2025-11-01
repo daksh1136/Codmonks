@@ -474,7 +474,7 @@ const Home = () => {
             Ready to transform your ideas into reality? Get in touch with us today and let&apos;s discuss your next project.
           </p>
           <Link href="/contact" className="bg-white text-black px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
-            Get Started Now
+            Start Project
           </Link>
         </div>
       </section>

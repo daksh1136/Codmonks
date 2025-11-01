@@ -464,13 +464,13 @@ footer {
     position: relative;
     .image {
         position: absolute;
-        content: "";
-        background: rgba(0, 0, 0, 0.5);
+        /* content: "";
+        background: rgba(0, 0, 0, 0.5); */
         left: 0;
         top: 0;
         bottom: 0;
         right: 0;
-        z-index: 0;
+        z-index: 0 !important;
     }
 }
 
@@ -482,7 +482,7 @@ footer {
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 0;
+    z-index: 1;
 }
 
 .tech-hero:after {
@@ -491,7 +491,7 @@ footer {
 
 .home-hero *, .about-hero *, .services-hero *, .tech-hero *, .portfolio-hero * {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Button */
