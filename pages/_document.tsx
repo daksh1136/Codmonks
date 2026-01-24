@@ -16,7 +16,7 @@ export default function Document() {
           rel="stylesheet"
         />
         <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-        <script type="IN/FollowCompany" data-id="0000" data-counter="bottom"></script>
+        <script type="IN/FollowCompany" data-id="107828742" data-counter="bottom"></script>
       </Head>
       <body className="antialiased">
         <Main />
