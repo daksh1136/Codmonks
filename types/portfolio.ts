@@ -7,7 +7,7 @@ export interface PortfolioProps {
   subTitle: string;
   description: string;
   keyFeature?: string[];
-  icon: string;
+  icon?: string;
   image: string;
   techStack: string;
   link: string;

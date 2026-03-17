@@ -18,11 +18,12 @@ const PortfolioCard = (props: PortfolioCardProps) => {
     >
       <div className="bg-gray-50">
         <div className="px-5 pt-5">
-          <img
+          { portfolio?.icon && <img
             alt=""
             className="rounded-md mx-auto h-[50px]"
             src={"/assets/images/portfolio/" + portfolio?.icon}
           />
+          }
           <p className="text-center mt-3 uppercase font-bold">
             {portfolio?.title}&nbsp;
           </p>

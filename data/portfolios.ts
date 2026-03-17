@@ -257,7 +257,7 @@ export const portfolioList: PortfolioProps[] = [
         techStack: '#Salesforce',
         link: '',
         caseStudy: '',
-        catagory: 'cms'
+        catagory: 'crm'
     },
     {
         id: 21,
@@ -269,7 +269,7 @@ export const portfolioList: PortfolioProps[] = [
         techStack: '#Salesforce',
         link: '',
         caseStudy: '',
-        catagory: 'cms'
+        catagory: 'crm'
     },
     {
         id: 22,
@@ -281,10 +281,10 @@ export const portfolioList: PortfolioProps[] = [
         techStack: '#Salesforce',
         link: '',
         caseStudy: '',
-        catagory: 'cms'
+        catagory: 'crm'
     },
     {
-        id: 22,
+        id: 23,
         title: 'COMMISSION COW',
         subTitle: 'COMMISSION COW',
         description: 'Founded by real estate professionals, CommissionCow\'s goal is to provide a fast and inexpensive solution to the short-term cash needs of colleagues in the industry. CommissionCow.com serves licensed residential real estate agents across the United States. Sometimes cash can be tight and closings long. They keep agents liquid by providing funds before a closing happens, at the best rates in the industry.',
@@ -292,6 +292,104 @@ export const portfolioList: PortfolioProps[] = [
         image: 'laptop-logoCommissionCow.webp',
         techStack: '#Salesforce',
         link: '',
+        caseStudy: '',
+        catagory: 'crm'
+    },
+    {
+        id: 24,
+        title: '3D BREAKFREE',
+        subTitle: 'COMMISSION COW',
+        description: 'AR Game for iOS and Android Mobile Devices developed for Tiffany Chocolate using Unity',
+        icon: '',
+        image: '3D-break-free.png.webp',
+        techStack: '#3D, #Unity, #AR',
+        link: '',
+        caseStudy: '',
+        catagory: 'unity'
+    },
+    {
+        id: 25,
+        title: 'CANNON BALL',
+        subTitle: '',
+        description: 'Game developed for Smart Watches such ads Android Wear, Apple Watch and Samsung Tizen using Unity.',
+        icon: '',
+        image: 'watch-game-canonBall.png.webp',
+        techStack: '#SmartWatch, #Unity, #Tizen, #Apple Watch, #Android Wear',
+        link: '',
+        caseStudy: '',
+        catagory: 'unity'
+    },
+    {
+        id: 26,
+        title: 'CRICKET',
+        subTitle: '',
+        description: '2D Sports Game developed for Web, Tizen, iOS and Android Mobile Devices using HTML5 Gaming Framework.',
+        icon: '',
+        image: 'cricket.webp',
+        techStack: '#2D, #HTML5, #iOS, #Android',
+        link: '',
+        caseStudy: '',
+        catagory: 'unity'
+    },
+    {
+        id: 27,
+        title: 'REAL ESTATE DEVELOPERS',
+        subTitle: '',
+        description: 'Mahindra Lifespaces is one of India’s best real estate developers, offering both value and premium residential flats in various parts of India.',
+        icon: 'mahinra-logo.png',
+        image: 'laptop-mahindra (1).webp',
+        techStack: '#wordpress',
+        link: '',
+        caseStudy: '',
+        catagory: 'cms'
+    },
+    {
+        id: 28,
+        title: 'INDIA GLYCOLS LTD',
+        subTitle: '',
+        description: 'A leading green chemical company in India, specializing in bio-based specialties and performance chemicals derived from renewable resources.',
+        icon: 'Untitled-design-6.png.webp',
+        image: 'India-Glycols-Limited.png.webp',
+        techStack: '#wordpress',
+        link: '',
+        caseStudy: '',
+        catagory: 'cms'
+    },
+    {
+        id: 29,
+        title: 'ACT FIBERNET',
+        subTitle: '',
+        description: 'One of India’s largest fiber broadband service providers, delivering high-speed internet and digital television services across multiple cities.',
+        icon: 'Untitled-design-5.png.webp',
+        image: 'act-fibernet.png.webp',
+        techStack: '#drupal10',
+        link: '',
+        caseStudy: '',
+        catagory: 'cms'
+    },
+    {
+        id: 30,
+        title: 'KARNATAKA BANK LTD',
+        subTitle: '',
+        description: 'A premier ‘A’ Class Scheduled Commercial Bank in India, offering a wide range of banking and financial services to over 12 million customers.',
+        icon: 'Untitled-design-2.png.webp',
+        image: 'KT-bank.png.webp',
+        techStack: '#drupal10',
+        link: '',
+        caseStudy: '',
+        catagory: 'cms'
+    },
+    {
+        id: 31,
+        title: 'SHIV YOG',
+        subTitle: 'SPIRITUAL ORGANIZATION WEBSITE',
+        description: 'A series of web-based solutions for an Organization that promotes spiritual life transformations. The websites perfectly capture the essence of the organization’s message as well as provide multiple options for users to sign up for events or communicate with the organization. The MDS team utilized WordPress, JQuery, HTML, & CSS to build these websites in accordance with the client’s requirements for a responsive website which would appeal to all users of varying age groups.',
+        icon: 'new-shiv-yog-logo_small.png',
+        image: 'Shivyog-india.webp',
+        techStack: '#Wordpress #CSS #HTML #jQuery',
+        keyFeature: ["Intuitive Layout", "Designed in accordance with Client's organizational ethos", "Custom Template Development", "Social Media Integration"],
+        link: '',
+        tools: ['WordPress', 'HTML', 'CSS', 'JQuery'],
         caseStudy: '',
         catagory: 'cms'
     }
