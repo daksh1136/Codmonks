@@ -70,7 +70,7 @@ const PortfolioCard = (props: PortfolioCardProps) => {
           portfolio?.tools &&
           <ul className="my-5">
             <li className="font-bold mt-3">Tech & Tools:</li>
-            {portfolio?.keyFeature?.map((feature, index) => (
+            {portfolio?.tools?.map((feature, index) => (
               <li key={index} className="ml-4">
                 {feature}
               </li>
