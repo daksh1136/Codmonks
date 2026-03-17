@@ -1,23 +1,10 @@
+import { PortfolioProps } from "@/types/portfolio";
 import Image from "next/image";
 import React, { useState } from "react";
 
-type PortfolioProps = {
-  id: number;
-  title: string;
-  subTitle: string;
-  description: string;
-  keyFeature?: string[];
-  tools?: string[];
-  icon: string;
-  image: string;
-  techStack?: string;
-  link?: string;
-  caseStudyLink?: string;
-  catagory: "mobile" | "web";
-};
-
 type PortfolioCardProps = {
   portfolio: PortfolioProps;
+  showInfo?: boolean;
 };
 
 const PortfolioCard = (props: PortfolioCardProps) => {

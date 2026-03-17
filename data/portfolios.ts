@@ -1,4 +1,6 @@
-export const portfolioList = [
+import { PortfolioProps } from "@/types/portfolio";
+
+export const portfolioList: PortfolioProps[] = [
     {
         id: 1,
         title: 'Anchor',

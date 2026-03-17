@@ -9,6 +9,26 @@ type selectOptionProps = {
     value: string
 }
 
+type PortfolioCategory = "mobile" | "web";
+type PortfolioProps = {
+  id: number;
+  title: string;
+  subTitle: string;
+  description: string;
+  keyFeature?: string[];
+  tools?: string[];
+  icon: string;
+  image: string;
+  techStack?: string;
+  link?: string;
+  caseStudyLink?: string;
+  catagory: PortfolioCategory;
+};
+
+type PortfolioCardProps = {
+  portfolio: PortfolioProps;
+};
+
 const Portfolio = () => {
 
     const [ filteredList, setFilteredList ] = useState(portfolioList);
