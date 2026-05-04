@@ -106,6 +106,19 @@ export const portfolioList: PortfolioProps[] = [
         catagory: 'web'
     },
     {
+        id: 32,
+        title: 'DUBAI POLICE',
+        subTitle: 'Cybersecurity Awareness Platform',
+        description: 'A large-scale public-facing digital platform focused on cybersecurity awareness, digital safety education, and accessible reporting guidance.',
+        tools: ["NextJs", "Responsive", "HTML/CSS", "Strapi CMS", "PostgreSQL"],
+        icon: 'dubai_police_logo.png',
+        image: 'laptop-dubai-police.png',
+        techStack: '#HTML #CSS #NextJs #Strapi',
+        link: '',
+        caseStudy: '',
+        catagory: 'web'
+    },
+    {
         id: 11,
         title: 'NewsCycle',
         subTitle: '',
@@ -127,6 +140,19 @@ export const portfolioList: PortfolioProps[] = [
         icon: 'getVokal-logo-portfolio2-1.png',
         image: 'laptop-getvokal.webp',
         techStack: '#NODEJS #FULL STACK',
+        link: '',
+        caseStudy: '',
+        catagory: 'web'
+    },
+    {
+        id: 33,
+        title: 'ROBORINGO',
+        subTitle: 'AI Receptionist & SaaS Dashboard',
+        description: 'An AI-powered business communication platform designed to automate receptionist tasks and manage virtual phone operations.',
+        tools: ["NextJs", "Responsive", "HTML/CSS", "PostgreSQL"],
+        icon: 'roboringo-logo.png',
+        image: 'laptop-roboringo-portfolio.png',
+        techStack: '#HTML #CSS #NextJs #Strapi',
         link: '',
         caseStudy: '',
         catagory: 'web'
@@ -169,6 +195,19 @@ export const portfolioList: PortfolioProps[] = [
         icon: 'logoPortIngenta.png',
         image: 'Ingentaport.webp',
         techStack: '#Angular #Ruby On Rails #HTML/CSS #Responsive',
+        link: '',
+        caseStudy: '',
+        catagory: 'web'
+    },
+    {
+        id: 34,
+        title: 'FINANCIALLY',
+        subTitle: 'AI-First Finance Platform',
+        description: 'A unified finance operations platform designed for single-entity and multi-entity businesses to centralize fragmented workflows.',
+        tools: ["NextJs", "Responsive", "HTML/CSS", "Tailwind CSS", "PostgreSQL", "Redux"],
+        icon: 'financially-logo.svg',
+        image: 'laptop-financialy.png',
+        techStack: '#HTML #CSS #NextJs #Strapi #TailwindCSS #SCSS',
         link: '',
         caseStudy: '',
         catagory: 'web'
