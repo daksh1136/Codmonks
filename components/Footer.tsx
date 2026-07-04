@@ -90,7 +90,7 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
               <div className="space-y-3 text-black">
-                <p><FontAwesomeIcon icon={faPhone} /> +91 7051282603</p>
+                <p><FontAwesomeIcon icon={faPhone} /> +91 7051282603, +91 9716837371</p>
                 <Link href="mailto:sales@codmonks.com"><FontAwesomeIcon icon={faEnvelope} /> sales@codmonks.com</Link>
                 <p><FontAwesomeIcon icon={faLocationDot} /> 769, Sec - 64, Ballabhgarh, Faridabad, Haryana - 121004</p>
               </div>
