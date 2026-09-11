@@ -1,19 +1,15 @@
-import Head from "next/head";
+import { SEO, breadcrumbSchema } from "@/components/SEO";
 import Image from "next/image";
 
 const Services = () => {
     return (
         <>
-            <Head>
-                <title>Services | CodMonks</title>
-                <meta name="description" content="Welcome to the home page" />
-                <link rel="canonical" href="https://codmonks.com/services" />
-            </Head>
+            <SEO title="Digital Services | CodMonks" description="Explore CodMonks design, development, quality assurance, SEO, and digital marketing services." path="/services" jsonLd={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }])} />
 
             {/* Hero Section */}
             <section className="services-hero py-40 px-4 overflow-hidden">
                 <Image
-                    src="/assets/images/banner-3.jpg"
+                    src="/assets/images/banner-3.webp"
                     alt="Hero background"
                     fill
                     priority

@@ -1,16 +1,11 @@
-import ContactForm from "@/components/ContactForm";
 import ContactForms from "@/components/ContactFormNew";
-import Head from "next/head";
+import { SEO, breadcrumbSchema } from "@/components/SEO";
 import React from "react";
 
 const Contact: React.FC = () => {
     return (
         <>
-            <Head>
-                <title>Contact Us | CodMonks</title>
-                <meta name="description" content="Welcome to the home page" />
-                <link rel="canonical" href="https://codmonks.com/contact" />
-            </Head>
+            <SEO title="Contact CodMonks | Discuss Your Project" description="Contact CodMonks to discuss your web, mobile, CRM, design, or digital marketing project." path="/contact" jsonLd={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }])} />
             <section className="bg-blur bg-blur-style-9 text-white py-20">
                 <div className="max-w-3xl mx-auto text-center">
                     <h1 className="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>

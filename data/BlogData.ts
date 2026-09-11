@@ -8,7 +8,7 @@ export const blogList = [
         date: 'Dec 15, 2024',
         readTime: '6 min read',
         tags: ['Web Development', 'AI', 'SSR', 'PWAs'],
-        image: '/assets/images/future-web.jpg',
+        image: '/assets/images/future-web.webp',
         content: `
             # 1. AI-Powered Development Tools
             AI tools like GitHub Copilot, ChatGPT plugins, and Tabnine are streamlining development and boosting productivity.
@@ -39,7 +39,7 @@ export const blogList = [
         date: 'Dec 12, 2024',
         readTime: '5 min read',
         tags: ['CSS', 'HTML', 'Responsive'],
-        image: '/assets/images/responsive-css.jpg',
+        image: '/assets/images/responsive-css.webp',
         content: `
             # Grid vs Flexbox
             Use Flexbox for one-dimensional layouts and Grid for two-dimensional structures.
@@ -61,7 +61,7 @@ export const blogList = [
         date: 'Dec 10, 2024',
         readTime: '3 min read',
         tags: ['Mobile', 'React Native', 'Flutter'],
-        image: '/assets/images/mobile-dev.jpg',
+        image: '/assets/images/mobile-dev.webp',
         content: `
             # Native Development
             Offers better performance and access to device-specific APIs.
@@ -81,7 +81,7 @@ export const blogList = [
         date: 'Dec 8, 2024',
         readTime: '7 min read',
         tags: ['SEO', 'Marketing', 'Analytics'],
-        image: '/assets/images/seo-best.jpg',
+        image: '/assets/images/seo-best.webp',
         content: `
             # Core Web Vitals
             Improve LCP, FID, and CLS scores for better rankings.
@@ -104,7 +104,7 @@ export const blogList = [
         date: 'Dec 5, 2024',
         readTime: '8 min read',
         tags: ['React', 'Hooks'],
-        image: '/assets/images/react-hooks.jpg',
+        image: '/assets/images/react-hooks.webp',
         content: `
             # useState & useEffect
             Manage state and side effects in function components.
@@ -124,7 +124,7 @@ export const blogList = [
         date: 'Dec 3, 2024',
         readTime: '6 min read',
         tags: ['Database', 'Optimization'],
-        image: '/assets/images/db-optimization.jpg',
+        image: '/assets/images/db-optimization.webp',
         content: `
             # Indexing
             Use proper indexes to speed up query execution.
@@ -144,7 +144,7 @@ export const blogList = [
         date: 'Dec 1, 2024',
         readTime: '4 min read',
         tags: ['API', 'Security', 'Web'],
-        image: '/assets/images/api-security.jpg',
+        image: '/assets/images/api-security.webp',
         content: `
             # Authentication
             Always use OAuth 2.0 or JWTs.

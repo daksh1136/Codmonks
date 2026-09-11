@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faCode, faImage, faMobile, faPalette, faPeopleArrows, faPhone, faRankingStar, faScrewdriverWrench, faThumbsUp, faTruck } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faCode, faMobile, faPalette, faPeopleArrows, faRankingStar, faScrewdriverWrench, faThumbsUp, faTruck } from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link';
-import Head from 'next/head';
+import { SEO, organizationSchema, websiteSchema } from '@/components/SEO';
 import Image from 'next/image';
 
 const services = [
@@ -40,24 +40,16 @@ const services = [
 const Home = () => {
   return (
     <>
-      <Head>
-        <title>CodMonks Technologies — Web, Mobile, CRM Solutions</title>
-        <meta name="description" content="Web, mobile, CRM, and e‑commerce development with SEO and digital marketing to grow businesses." />
-        <meta property="og:title" content="CodMonks Technologies — Web, Mobile, CRM Solutions" />
-        <meta property="og:description" content="Web, mobile, CRM, and e‑commerce development with SEO and digital marketing." />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://codmonks.com/assets/images/og-banner.jpg" />
-        <meta property="og:url" content="https://codmonks.com/" />
-        <link rel="canonical" href="https://codmonks.com/" />
-      </Head>
+      <SEO title="CodMonks Technologies — Web, Mobile, CRM Solutions" description="Web, mobile, CRM, and e-commerce development with SEO and digital marketing to grow businesses." path="/" jsonLd={[organizationSchema, websiteSchema]} />
 
       {/* <!-- Hero Section --> */}
       <section className="py-20 home-hero">
         <Image
-          src="/assets/images/h-banner-4.jpg"
+          src="/assets/images/h-banner-4.webp"
           alt="Hero background"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover -z-10 image"
         />
@@ -133,7 +125,7 @@ const Home = () => {
               <Image height={80} width={80} src="/assets/images/PayPal-Logo.png" alt="Paypal Integration Partner" />
             </div>
             <div className="partner">
-              <Image height={80} width={80} src="/assets/images/google.png" alt="Goggle Api Development" />
+              <Image height={80} width={80} src="/assets/images/google.png" alt="Google API Development" />
             </div>
           </div>
         </div>

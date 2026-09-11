@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { SEO, breadcrumbSchema } from "@/components/SEO";
 import Image from "next/image";
 import { portfolioList } from '../../data/portfolios';
 import { useRef, useState } from "react";
@@ -35,16 +35,12 @@ const Portfolio = () => {
 
     return (
         <>
-        <Head>
-            <title>Portfolio | CodMonks</title>
-            <meta name="description" content="Welcome to the home page" />
-            <link rel="canonical" href="https://codmonks.com/portfolio" />
-        </Head>
+        <SEO title="Portfolio | CodMonks" description="Explore selected web, mobile, CRM, CMS, frontend, and interactive projects by CodMonks." path="/portfolio" jsonLd={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Portfolio", path: "/portfolio" }])} />
         <div className="min-h-screen bg-background">
             {/* <!-- Hero Section --> */}
             <section className="relative py-40 px-4 overflow-hidden portfolio-hero">
                 <Image
-                    src="/assets/images/banner-9.jpeg"
+                    src="/assets/images/banner-9.webp"
                     alt="Hero background"
                     fill
                     priority
@@ -101,4 +97,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-

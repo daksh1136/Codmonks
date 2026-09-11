@@ -1,6 +1,6 @@
 
 import { Code, Database, Cloud, Globe, Server } from "lucide-react";
-import Head from "next/head";
+import { SEO, breadcrumbSchema } from "@/components/SEO";
 import Image from "next/image";
 import Link from "next/link";
 // import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -99,11 +99,7 @@ const Technologies = () => {
 
     return (
         <>
-            <Head>
-                <title>Technologies | CodMonks</title>
-                <meta name="description" content="Welcome to the home page" />
-                <link rel="canonical" href="https://codmonks.com/technologies" />
-            </Head>
+            <SEO title="Technologies We Use | CodMonks" description="Discover the web, mobile, cloud, CMS, CRM, and marketing technologies used by CodMonks." path="/technologies" jsonLd={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Technologies", path: "/technologies" }])} />
             {/* Hero Section */}
             <section className="relative py-40 px-4 overflow-hidden tech-hero">
                 <Image
@@ -220,4 +216,3 @@ const Technologies = () => {
 };
 
 export default Technologies;
-

@@ -1,13 +1,9 @@
-import Head from "next/head";
+import { SEO } from "@/components/SEO";
 
 const PrivacyPolicy = () => {
     return (
         <>
-        <Head>
-            <title>Privacy Policy | CodMonks</title>
-            <meta name="description" content="Welcome to the home page" />
-            <link rel="canonical" href="https://codmonks.com/privacy-policy" />
-        </Head>
+        <SEO title="Privacy Policy | CodMonks" description="Read the CodMonks privacy policy and how we handle information submitted through this website." path="/privacy-policy" />
         <div className="max-w-4xl mx-auto px-4 py-16 text-gray-800">
             <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
 

@@ -21,7 +21,7 @@ export default function ContactForms() {
       body: JSON.stringify({ name, email, phone, message }),
     });
 
-    const data = await res.json();
+    await res.json();
     setIsLoading(false);
 
     if (res.ok) {
@@ -57,7 +57,7 @@ export default function ContactForms() {
                             />
                         </div>
                         <div className="col-span-2 md:col-span-1">
-                            <label htmlFor="emailAddress" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                             <input
                                 id="email"
                                 type="email"
@@ -69,7 +69,7 @@ export default function ContactForms() {
                             />
                         </div>
                         <div className="col-span-2 md:col-span-1">
-                            <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
                             <input
                                 type="tel"
                                 id="phone" // Added ID for label association
@@ -82,7 +82,7 @@ export default function ContactForms() {
                             />
                         </div>
                         <div className="col-span-2">
-                            <label htmlFor="messageText" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                             <textarea
                                 id="message"
                                 value={message}

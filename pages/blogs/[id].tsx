@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Head from 'next/head';
+import { absoluteUrl, breadcrumbSchema, SEO } from '@/components/SEO';
 import { blogList } from '../../data/BlogData';
 import { remark } from 'remark';
 import html from 'remark-html';
@@ -75,11 +75,10 @@ const BlogDetail = ({ blog }: BlogDetailProps) => {
 
   return (
     <>
-      <Head>
-        <title>{blog.title} | My Blog</title>
-        <meta name="description" content={blog.description} />
-        <link rel="canonical" href={`https://codmonks.com/blogs/${blog.id}`} />
-      </Head>
+      <SEO title={`${blog.title} | CodMonks`} description={blog.description} path={`/blogs/${blog.id}`} image={blog.image} type="article" jsonLd={[
+        breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Blog", path: "/blogs" }, { name: blog.title, path: `/blogs/${blog.id}` }]),
+        { "@context": "https://schema.org", "@type": "BlogPosting", headline: blog.title, description: blog.description, author: { "@type": "Organization", name: blog.author }, publisher: { "@type": "Organization", name: "CodMonks", logo: { "@type": "ImageObject", url: absoluteUrl("/assets/images/logo-1-tp.png") } }, image: absoluteUrl(blog.image), mainEntityOfPage: absoluteUrl(`/blogs/${blog.id}`) },
+      ]} />
 
       <div className="max-w-4xl mx-auto px-4 py-12">
         <p className="text-lg font-bold mb-2 text-black">{blog.tags[0] || 'General'}</p>

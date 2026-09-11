@@ -1,10 +1,9 @@
 // pages/blogs/index.tsx
 import Link from 'next/link';
-import Head from 'next/head'; // Added Head for better SEO
+import { SEO, breadcrumbSchema } from '@/components/SEO';
 import { blogList } from '../../data/BlogData'; 
 import React from 'react'; // Added React import for TS
 import { Calendar, ArrowRight } from "lucide-react";
-import Image from 'next/image';
 // ---
 // Define types for blog items for clarity in this component
 interface BlogListItem {
@@ -26,7 +25,7 @@ interface BlogListProps {
 // getStaticProps to fetch blog list at build time
 export async function getStaticProps() {
     // We only need a subset of data for the list view (no 'content' Markdown)
-    const blogsForList = blogList.map(({ content, ...rest }) => rest);
+    const blogsForList = blogList.map(blog => ({ id: blog.id, title: blog.title, description: blog.description, author: blog.author, date: blog.date, readTime: blog.readTime, tags: blog.tags, image: blog.image }));
 
     return {
         props: {
@@ -61,11 +60,7 @@ const Blog = ({ blogs }: BlogListProps) => { // Accept 'blogs' as a prop
 
     return (
         <div className="min-h-screen bg-background">
-            <Head>
-                <title>Blog - Latest Articles | CodMonks</title>
-                <meta name="description" content="Stay updated with the latest trends, tutorials, and insights from the world of technology and development." />
-                <link rel="canonical" href="https://codmonks.com/blogs" />
-            </Head>
+            <SEO title="Blog | CodMonks Insights" description="Explore CodMonks articles on web development, mobile apps, SEO, security, and modern technology." path="/blogs" jsonLd={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Blog", path: "/blogs" }])} />
 
             {/* Hero Section */}
             <section className="relative py-20 px-4 overflow-hidden bg-blur bg-blur-style-6">

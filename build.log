@@ -1,0 +1,66 @@
+
+> codmonks-nxt@0.1.0 prebuild
+> node scripts/generate-sitemap.mjs
+
+
+> codmonks-nxt@0.1.0 build
+> next build
+
+ ⚠ Attempted to load /Users/maheshsharma/Documents/Projects/CodMonks/node_modules/next/next-swc-fallback/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, but it was not installed
+ ⚠ Attempted to load @next/swc-darwin-arm64, but it was not installed
+ ⚠ Warning: Found multiple lockfiles. Selecting /Users/maheshsharma/package-lock.json.
+   Consider removing the lockfiles at:
+   * /Users/maheshsharma/Documents/Projects/CodMonks/package-lock.json
+
+   ▲ Next.js 15.4.10
+   - Environments: .env.local
+
+   Skipping linting
+   Checking validity of types ...
+   Creating an optimized production build ...
+ ⚠ Attempted to load /Users/maheshsharma/Documents/Projects/CodMonks/node_modules/next/next-swc-fallback/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, but it was not installed
+ ⚠ Attempted to load @next/swc-darwin-arm64, but it was not installed
+ ⚠ Attempted to load /Users/maheshsharma/Documents/Projects/CodMonks/node_modules/next/next-swc-fallback/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, but it was not installed
+ ⚠ Attempted to load @next/swc-darwin-arm64, but it was not installed
+ ⚠ Attempted to load /Users/maheshsharma/Documents/Projects/CodMonks/node_modules/next/next-swc-fallback/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, but it was not installed
+ ⚠ Attempted to load @next/swc-darwin-arm64, but it was not installed
+Browserslist: browsers data (caniuse-lite) is 15 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ Compiled successfully in 6.0s
+   Collecting page data ...
+   Generating static pages (0/17) ...
+   Generating static pages (4/17) 
+   Generating static pages (8/17) 
+   Generating static pages (12/17) 
+ ✓ Generating static pages (17/17)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (pages)                                 Size  First Load JS
+┌ ○ /                                       3.9 kB         140 kB
+├   /_app                                      0 B         136 kB
+├ ○ /404                                     180 B         136 kB
+├ ○ /about-us                                 4 kB         140 kB
+├ ƒ /api/contact                               0 B         136 kB
+├ ● /blogs                                 3.77 kB         140 kB
+├ ● /blogs/[id] (823 ms)                   1.65 kB         137 kB
+├   ├ /blogs/future-web-dev
+├   ├ /blogs/responsive-css
+├   ├ /blogs/mobile-dev
+├   └ [+4 more paths]
+├ ○ /contact                               3.12 kB         139 kB
+├ ○ /portfolio                             8.97 kB         145 kB
+├ ○ /privacy-policy                        2.15 kB         138 kB
+├ ○ /services                              6.42 kB         142 kB
+└ ○ /technologies                          4.15 kB         140 kB
++ First Load JS shared by all               145 kB
+  ├ chunks/framework-7c95b8e5103c9e90.js   57.7 kB
+  ├ chunks/main-bcea087951da03e6.js        39.8 kB
+  ├ chunks/pages/_app-d2d887b2576d39de.js  37.5 kB
+  └ other shared chunks (total)            9.53 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+

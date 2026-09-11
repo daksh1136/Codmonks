@@ -3,23 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons"
 import Image from "next/image";
 import Link from "next/link";
+import { footerCompanyLinks, footerServiceLinks } from "./navigation";
 
-const servicesLinks = [
-  { label: 'Web Development', path: '/services' },
-  { label: 'Mobile App Development', path: '/services' },
-  { label: 'UI/UX Design', path: '/services' },
-  { label: 'Quality Assurance', path: '/services' },
-  { label: 'Digital Marketing', path: '/services' },
-];
-
-const companyLinks = [
-  { label: 'About Us', path: '/about-us' },
-  { label: 'Technologies', path: '/technologies' },
-  { label: 'Portfolio', path: '/portfolio' },
-  { label: 'Blog', path: '/blog' },
-  { label: 'Contact', path: '/contact' },
-  { label: 'Privacy Policy', path: '/privacy-policy' },
-];
 
 const Footer = () => {
   return (
@@ -46,16 +31,16 @@ const Footer = () => {
                 We are a global digital solutions company crafting high-performing, scalable products and platforms that exceed user and business expectations.
               </p>
               <div className="flex space-x-4">
-                <Link target="_blank" href="https://www.facebook.com/people/Codmonks-Technologies/61580622238665/" className="text-blue-600 hover:text-golden">
+                <Link target="_blank" rel="noopener noreferrer" aria-label="CodMonks on Facebook" href="https://www.facebook.com/people/Codmonks-Technologies/61580622238665/" className="text-blue-600 hover:text-golden">
                   <FontAwesomeIcon icon={faFacebook} />
                 </Link>
-                <Link target="_blank" href="https://x.com/codmonkstech?s=11" className="text-blue-600 hover:text-golden">
+                <Link target="_blank" rel="noopener noreferrer" aria-label="CodMonks on X" href="https://x.com/codmonkstech?s=11" className="text-blue-600 hover:text-golden">
                   <FontAwesomeIcon icon={faXTwitter} />
                 </Link>
-                <Link target="_blank" href="https://www.linkedin.com/company/codmonks-technologies/" className="text-blue-600 hover:text-golden">
+                <Link target="_blank" rel="noopener noreferrer" aria-label="CodMonks on LinkedIn" href="https://www.linkedin.com/company/codmonks-technologies/" className="text-blue-600 hover:text-golden">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </Link>
-                <Link target="_blank" href="https://www.instagram.com/codmonkstech/" className="text-blue-600 hover:text-golden">
+                <Link target="_blank" rel="noopener noreferrer" aria-label="CodMonks on Instagram" href="https://www.instagram.com/codmonkstech/" className="text-blue-600 hover:text-golden">
                   <FontAwesomeIcon icon={faInstagram} />
                 </Link>
               </div>
@@ -64,7 +49,7 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6">Services</h4>
               <ul className="space-y-3 text-black">
-                {servicesLinks.map(({ label, path }) => (
+                {footerServiceLinks.map(({ label, path }) => (
                   <li key={label}>
                     <Link href={path}>
                       {label}
@@ -77,7 +62,7 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6">Company</h4>
               <ul className="space-y-3 text-black">
-                {companyLinks.map(({ label, path }) => (
+                {footerCompanyLinks.map(({ label, path }) => (
                   <li key={label}>
                     <Link href={path}>
                       {label}

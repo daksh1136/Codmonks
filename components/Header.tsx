@@ -5,16 +5,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-
-const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about-us', label: 'About Us' },
-    { path: '/services', label: 'Services' },
-    { path: '/technologies', label: 'Technologies' },
-    { path: '/portfolio', label: 'Portfolio' },
-    { path: '/blogs', label: 'Blog' },
-    { path: '/contact', label: 'Contact Us' },
-];
+import { navigationItems } from './navigation';
 
 const Header = () => {
 
@@ -44,7 +35,7 @@ const Header = () => {
 
                     <div className={isMobileNav ? 'active lg:flex items-center space-x-8 top-nav' : 'lg:flex items-center space-x-8 top-nav'}>
                         <nav className="flex gap-6">
-                            {navItems.map(({ path, label }) => (
+                            {navigationItems.map(({ path, label }) => (
                                 <ActiveLink
                                     key={path} // Keep key if this is part of a mapped list
                                     href={path}

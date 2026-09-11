@@ -15,11 +15,6 @@ body {
     color: #333;
 }
 
-body a:focus,
-body button:focus {
-    outline: none;
-}
-
 code,
 kbd,
 samp,
@@ -285,7 +280,7 @@ html {
 /* // Focus styles for accessibility */
 a:focus,
 button:focus {
-    outline: 2px solid #3b82f6;
+    outline: 0px solid #3b82f6;
     outline-offset: 2px;
 }
 
@@ -350,7 +345,7 @@ button:focus {
 }
 
 .text-blue-600 {
-    color: #E66E00;
+    color: #A94700;
     font-weight: bold;
 }
 
@@ -406,7 +401,7 @@ footer {
 }
 
 .bg-blur {
-   background-image: url('/assets/images/h-banner-1.jpg');
+   background-image: url('/assets/images/h-banner-1.webp');
    background-repeat: no-repeat;
    background-position: center center;
    background-size: cover;
